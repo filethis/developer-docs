@@ -1,0 +1,7 @@
+{
+  "name": "partner-site",
+  "short_name": "partner-site",
+  "description": "A project that defines a static internal site for partner devs. The main site at https://developer.filethis.com will link to it.",
+  "start_url": "/",
+  "display": "standalone"
+}
