@@ -88,10 +88,15 @@ publish-docs-github-pages: build-docs  ## Publish application docs on GitHub Pag
 		--branch gh-pages \
 		--dist ./docs/ \
 		--remove ./docs/README.md; \
-	echo Published documentation for version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME};
+	echo Published documentation for version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME}; \
+	open https://filethis.github.io/${NAME};
 
 .PHONY: publish-app-github-pages
-publish-docs-github-pages: build-docs  ## Publish application itself on GitHub Pages. Overrides publish-docs-github-pages.
-	@xxxxx; \
-	echo Published version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME};
+publish-app-github-pages: build-docs  ## Publish application itself on GitHub Pages. Overrides publish-docs-github-pages.
+	@gh-pages \
+		--repo https://github.com/filethis/${NAME}.git \
+		--branch gh-pages \
+		--dist ./build/bundled; \
+	echo Published version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME}; \
+	open https://filethis.github.io/${NAME};
 
