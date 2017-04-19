@@ -1,22 +1,7 @@
-<!--
-Copyright 2017 FileThis, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
-
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../bower_components/prism-element/prism-highlighter.html">
 
 <!--
 `partner-site`
@@ -30,9 +15,11 @@ This is a private project and GitHub repository.
 
     <template>
 
-        <div>
-            Yahoo!!!
-        </div>
+        <prism-highlighter></prism-highlighter>
+
+        <marked-element markdown="{{_landingText}}">
+            <div class="markdown-html"></div>
+        </marked-element>
 
     </template>
 
@@ -43,8 +30,85 @@ This is a private project and GitHub repository.
 
             properties:
             {
-            }
+                _landingText:
+                {
+                    type: String,
+                    notify: true,
+                    value: "Placeholder"
+                }
+            },
+
+            ready: function()
+            {
+                this._httpGet("src/landing-page.md")
+                    .then(function(text)
+                    {
+                        this._landingText = text;
+                    }.bind(this));
+            },
+
+            _httpGet: function(url)
+            {
+                var nullBody = null;
+                return this._http('GET', url, nullBody)
+            },
+
+            _httpPut: function(url, body)
+            {
+                return this._http('PUT', url, body)
+            },
+
+            _httpPost: function(url, body)
+            {
+                return this._http('POST', url, body)
+            },
+
+            _httpDelete: function(url)
+            {
+                var nullBody = null;
+                return this._http('DELETE', url, nullBody)
+            },
+
+            _http: function(method, url, body)
+            {
+                return new Promise(function(resolve, reject)
+                {
+                    var request = new XMLHttpRequest();
+
+                    request.open(method, url, true);
+
+                    // On getting a response from the server
+                    request.onload = function()
+                    {
+                        // If the request was successful
+                        if (request.status == "200")
+                        {
+                            // Resolve our promise with the result
+                            resolve(request.responseText);
+                        }
+                        else // the request failed
+                        {
+                            // Reject our promise, returning an Error instance describing the problem
+                            reject(new Error("Server returned: \"" + request.statusText + "\""));
+                        }
+                    }.bind(this);
+
+                    // On failing to get a response from the server
+                    request.onerror = function(message, url, lineNumber, columnNumber, errorObject)
+                    {
+                        // Reject our promise, returning an Error instance describing the problem
+                        reject(message);
+                    }.bind(this);
+
+                    // Make the request
+                    if (body == null)
+                        request.send();
+                    else
+                        request.send(body);
+                }.bind(this));
+            },
 
         });
+
     </script>
 </dom-module>
