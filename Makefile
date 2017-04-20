@@ -1,10 +1,10 @@
 # Project configuration
 NAME=partner-site
-VERSION=0.0.4
+VERSION=0.0.5
 LOCAL_PORT=3044
 GITHUB_USER=filethis
 BOWER_NAMESPACE=FileThis
-DOC_PAGE_SOURCE=README.md
+DOC_PAGE_SOURCE=src/landing-page.md
 
 # Project targets
 include project-application.make
