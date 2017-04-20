@@ -1,37 +1,80 @@
-<!--
-Copyright 2017 FileThis, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Content-Style-Type" content="text/css"/>
-    <meta name="generator" content="pandoc"/>
-    <title></title>
-    <style type="text/css">code {
-        white-space: pre;
-    }</style>
-    <link rel="stylesheet" href="./docs.css" type="text/css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./docs.css" type="text/css" />
 </head>
 <body>
-<h1 id="partner-site">&lt;partner-site&gt;</h1>
-<p>A project that defines a static internal site for partner devs. The main site at https://developer.filethis.com will
-    link to it.</p>
-<p>View on GitHub</p>
+<h2 id="howdy-partner">Howdy, Partner!</h2>
+<p>This page is an early draft of documentation for the FileThis &quot;Partner Application&quot; web component which is currently under active development. When complete, this component can be embedded into our partner's own web pages to provide out-of-the box integration with our Document Aggregation Service (DAS). Partner end-users will be able to seamlessly interact with the FileThis services in the context of each partner's own pages and workflows. The component is customizable in many ways: CSS, runtime configuration options, the adding, removing, or re-composition of sub-components, and even forking of source code from our public repositories to make deeper changes.</p>
+<p>Before the full application component is complete, we are releasing the sub-components which make it up, in the hope that they may be useful to our partners, either as living examples of what is to come, or in their own right as parts of integration work already in progress.</p>
+<p>Of the several sub-components we are publishing, there is one in particular that may be of immediate use: Our &quot;user interaction&quot; form. User interaction requests are abstract representations of the various challenge questions that can be posed by a website when our services log in and traverse them. These questions must be conveyed to the end-user for them to answer in realtime. When our service gets the user's response back, the fetching process resumes, resulting in the delivery of documents. Our <a href="https://filethis.github.io/ft-user-interactions-demo">ft-user-interaction-form</a> component takes as input the JSON representation of a user interaction request, dynamically renders a GUI dialog from it, collects user input, and generates the JSON representation of the response to be sent back to our servers. Having a drop-in implementation of this UI and behavior will save a considerable amount of time and trouble for partners and we want to make it available even before the full solution is ready.</p>
+<h2 id="google-polymer">Google Polymer</h2>
+<p>To build our web components, we have chosen to use a JavaScript library called <a href="https://www.polymer-project.org/">Google Polymer</a>. Google founded an independent organization at <a href="https://www.webcomponents.org/">WebComponents.org</a> to support Polymer and other component libraries that adhere to a set of published standards.</p>
+<p>As this document evolves, we will say more here about how to get started with Polymer and how to set up your development environment to build and test our components. Until then, we refer you to their <a href="https://www.polymer-project.org/1.0/docs/devguide/feature-overview">online documentation</a>. Note that our components are built on version 1 of Polymer, not yet the latest 2.0 that is frontmost on their website. We will be porting our code to the latest version, in due course. As an instantiator of the components, you will see very little difference in element public API's between the versions.</p>
+<h2 id="exploring-the-filethis-partner-application-web-components">Exploring the FileThis Partner Application Web Components</h2>
+<p>As you will read in the Polymer documentation, Polymer elements are published in two ways: As unique GitHub repositories, and as Bower packages. The latter are used to pull down versions of published component code and their library dependencies into development and deployment environments. The GitHub repositories provide versioned source code that can be pulled and/or forked for customization.</p>
+<p>Polymer provides some very nice support for the documentation of components. It will generate a documentation page from source file <a href="http://usejsdoc.org/">JSDoc</a> annotations of element properties, methods, and events. Furthermore, if developers take the time to write a simple demo app to illustrate the appearance and behavior of an element, Polymer will include this live demo on the generated documentation page. We have taken advantage of this to create documentation for each of our elements.</p>
+<p>The following is a list of the more mature FileThis partner application components. Note that there is a button at the top right of each of the documentation pages that toggles between the API documentation and an element demo.</p>
+<table>
+<colgroup>
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">### Source Panel</td>
+</tr>
+<tr class="even">
+<td align="left">ft-source-panel  <a href="https://filethis.github.io/ft-source-panel/components/ft-source-panel/">documentation</a>  <a href="https://github.com/filethis/ft-source-panel">repository</a></td>
+</tr>
+<tr class="odd">
+<td align="left">ft-create-connection-dialog  <a href="https://filethis.github.io/ft-create-connection-dialog/components/ft-create-connection-dialog/">documentation</a>  <a href="https://github.com/filethis/ft-create-connection-dialog">repository</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="connection-panel">Connection Panel</h3>
+<p>ft-connections-panel  <a href="https://filethis.github.io/ft-connections-panel/components/ft-connections-panel/">documentation</a>  <a href="https://github.com/filethis/ft-connections-panel">repository</a></p>
+<p>ft-connection-list  <a href="https://filethis.github.io/ft-connection-list/components/ft-connection-list/">documentation</a>  <a href="https://github.com/filethis/ft-connection-list">repository</a></p>
+<p>ft-connection-list-item  <a href="https://filethis.github.io/ft-connection-list-item/components/ft-connection-list-item/">documentation</a>  <a href="https://github.com/filethis/ft-connection-list-item">repository</a></p>
+<p>ft-connection-details  <a href="https://filethis.github.io/ft-connection-details/components/ft-connection-details/">documentation</a>  <a href="https://github.com/filethis/ft-connection-details">repository</a></p>
+<table>
+<colgroup>
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">### Document Panel</td>
+</tr>
+<tr class="even">
+<td align="left">ft-document-panel  <a href="https://filethis.github.io/ft-document-panel/components/ft-document-panel/">documentation</a>  <a href="https://github.com/filethis/ft-document-panel">repository</a></td>
+</tr>
+<tr class="odd">
+<td align="left">ft-document-list  <a href="https://filethis.github.io/ft-document-list/components/ft-document-list/">documentation</a>  <a href="https://github.com/filethis/ft-document-list">repository</a></td>
+</tr>
+<tr class="even">
+<td align="left">ft-document-list-item  <a href="https://filethis.github.io/ft-document-list-item/components/ft-document-list-item/">documentation</a>  <a href="https://github.com/filethis/ft-document-list-item">repository</a></td>
+</tr>
+<tr class="odd">
+<td align="left">ft-document-grid  <a href="https://filethis.github.io/ft-document-grid/components/ft-document-grid/">documentation</a>  <a href="https://github.com/filethis/ft-document-grid">repository</a></td>
+</tr>
+<tr class="even">
+<td align="left">ft-document-grid-item  <a href="https://filethis.github.io/ft-document-grid-item/components/ft-document-grid-item/">documentation</a>  <a href="https://github.com/filethis/ft-document-grid-item">repository</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-interactions">User Interactions</h3>
+<p>ft-user-interaction-form  <a href="https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/">documentation</a>  <a href="https://github.com/filethis/ft-user-interaction-form">repository</a></p>
+<p>ft-user-interactions-demo  <a href="https://filethis.github.io/ft-user-interactions-demo/components/ft-user-interactions-demo/">documentation</a>  <a href="https://github.com/filethis/ft-user-interactions-demo">repository</a></p>
+<h2 id="caveat-hackor">Caveat Hackor</h2>
+<p>Our code is under very active development. Please consider it potentially-useful late-alpha, early-beta software. It will settle down once we release the first version of our full partner application component. Because it is strictly versioned, though, you can lock in the use of a particular sub-component version in your code, but be aware that subsequent versions may change considerably. We use <a href="http://semver.org/">semantic versioning</a> and you can therefore know by the version number increments whether the changes require you to modify your own code for compatibility, or not. The &quot;SemVer&quot; rules for bumping the numbers are, in brief:</p>
+<pre><code>Given a version number MAJOR.MINOR.PATCH, increment the:
+
+    MAJOR version when you make incompatible API changes,
+    MINOR version when you add functionality in a backwards-compatible manner, and
+    PATCH version when you make backwards-compatible bug fixes.</code></pre>
 </body>
 </html>
