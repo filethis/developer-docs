@@ -23,6 +23,7 @@ Polymer provides some very nice support for the documentation of components. It 
 The following is a list of the more mature FileThis partner application components. Note that there is a button at the top right of each of the documentation pages that toggles between the API documentation and an element demo.
 
 -------------------------------
+
 ### Source Panel
 
 ft-source-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-source-panel/components/ft-source-panel/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-source-panel)
@@ -30,6 +31,7 @@ ft-source-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-source-
 ft-create-connection-dialog&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-create-connection-dialog/components/ft-create-connection-dialog/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-create-connection-dialog)
 
 -------------------------------
+
 ### Connection Panel
 
 ft-connections-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-connections-panel/components/ft-connections-panel/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-connections-panel)
@@ -41,6 +43,7 @@ ft-connection-list-item&nbsp;&nbsp;[documentation](https://filethis.github.io/ft
 ft-connection-details&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-connection-details/components/ft-connection-details/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-connection-details)
 
 -------------------------------
+
 ### Document Panel
 
 ft-document-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-document-panel/components/ft-document-panel/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-document-panel)
@@ -54,6 +57,7 @@ ft-document-grid&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-docume
 ft-document-grid-item&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-document-grid-item/components/ft-document-grid-item/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-document-grid-item)
 
 -------------------------------
+
 ### User Interactions
 
 ft-user-interaction-form&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-user-interaction-form)
