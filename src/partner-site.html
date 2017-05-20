@@ -40,36 +40,36 @@ This is a private project and GitHub repository.
 
             ready: function()
             {
-                this._httpGet("src/landing-page.md")
+                this.httpGet("src/landing-page.md")
                     .then(function(text)
                     {
                         this._landingText = text;
                     }.bind(this));
             },
 
-            _httpGet: function(url)
+            httpGet: function(url)
             {
                 var nullBody = null;
-                return this._http('GET', url, nullBody)
+                return this.http('GET', url, nullBody)
             },
 
-            _httpPut: function(url, body)
+            httpPut: function(url, body)
             {
-                return this._http('PUT', url, body)
+                return this.http('PUT', url, body)
             },
 
-            _httpPost: function(url, body)
+            httpPost: function(url, body)
             {
-                return this._http('POST', url, body)
+                return this.http('POST', url, body)
             },
 
-            _httpDelete: function(url)
+            httpDelete: function(url)
             {
                 var nullBody = null;
-                return this._http('DELETE', url, nullBody)
+                return this.http('DELETE', url, nullBody)
             },
 
-            _http: function(method, url, body)
+            http: function(method, url, body)
             {
                 return new Promise(function(resolve, reject)
                 {
