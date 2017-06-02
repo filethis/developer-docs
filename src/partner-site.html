@@ -81,7 +81,7 @@ This is a private project and GitHub repository.
                     request.onload = function()
                     {
                         // If the request was successful
-                        if (request.status == "200")
+                        if (request.status === "200")
                         {
                             // Resolve our promise with the result
                             resolve(request.responseText);
@@ -106,7 +106,7 @@ This is a private project and GitHub repository.
                     else
                         request.send(body);
                 }.bind(this));
-            },
+            }
 
         });
 
