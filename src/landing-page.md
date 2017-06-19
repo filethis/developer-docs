@@ -34,7 +34,7 @@ ft-create-connection-dialog&nbsp;&nbsp;[documentation](https://filethis.github.i
 
 ### Connection Panel
 
-ft-connections-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-connections-panel/components/ft-connections-panel/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-connections-panel)
+ft-connection-panel&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-connection-panel/components/ft-connection-panel/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-connection-panel)
 
 ft-connection-list&nbsp;&nbsp;[documentation](https://filethis.github.io/ft-connection-list/components/ft-connection-list/)&nbsp;&nbsp;[repository](https://github.com/filethis/ft-connection-list)
 
