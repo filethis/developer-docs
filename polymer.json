@@ -6,7 +6,7 @@
     "shell": "src/partner-site.html",
     "fragments": [
     ],
-    "sourceGlobs": [
+    "sources": [
      "src/**/*",
      "data/**/*",
      "bower.json"
