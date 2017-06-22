@@ -1,0 +1,120 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../bower_components/prism-element/prism-highlighter.html">
+
+<!--
+`partner-site`
+An element that defines the top-level of the FileThis partner developer site.
+
+This is a private project and GitHub repository.
+-->
+<dom-module id="partner-site">
+
+    <template>
+
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+
+        <style>
+            :host {
+                display:block;
+            }
+        </style>
+
+        <prism-highlighter></prism-highlighter>
+
+        <marked-element markdown="{{_landingText}}">
+            <div class="markdown-html"></div>
+        </marked-element>
+
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'partner-site',
+
+            properties:
+            {
+                _landingText:
+                {
+                    type: String,
+                    value: "Placeholder"
+                }
+            },
+
+            ready: function()
+            {
+                this.httpGet("src/landing-page.md")
+                    .then(function(text)
+                    {
+                        this._landingText = text;
+                    }.bind(this));
+            },
+
+            httpGet: function(url)
+            {
+                var nullBody = null;
+                return this.http('GET', url, nullBody)
+            },
+
+            httpPut: function(url, body)
+            {
+                return this.http('PUT', url, body)
+            },
+
+            httpPost: function(url, body)
+            {
+                return this.http('POST', url, body)
+            },
+
+            httpDelete: function(url)
+            {
+                var nullBody = null;
+                return this.http('DELETE', url, nullBody)
+            },
+
+            http: function(method, url, body)
+            {
+                return new Promise(function(resolve, reject)
+                {
+                    var request = new XMLHttpRequest();
+
+                    request.open(method, url, true);
+
+                    // On getting a response from the server
+                    request.onload = function()
+                    {
+                        // If the request was successful
+                        if (request.status === "200")
+                        {
+                            // Resolve our promise with the result
+                            resolve(request.responseText);
+                        }
+                        else // the request failed
+                        {
+                            // Reject our promise, returning an Error instance describing the problem
+                            reject(new Error("Server returned: \"" + request.statusText + "\""));
+                        }
+                    }.bind(this);
+
+                    // On failing to get a response from the server
+                    request.onerror = function(message, url, lineNumber, columnNumber, errorObject)
+                    {
+                        // Reject our promise, returning an Error instance describing the problem
+                        reject(message);
+                    }.bind(this);
+
+                    // Make the request
+                    if (body == null)
+                        request.send();
+                    else
+                        request.send(body);
+                }.bind(this));
+            }
+
+        });
+
+    </script>
+</dom-module>
