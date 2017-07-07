@@ -1,6 +1,6 @@
 # Project configuration
 NAME=partner-site
-VERSION=0.0.7
+VERSION=0.0.9
 LOCAL_PORT=3044
 GITHUB_USER=filethis
 BOWER_NAMESPACE=FileThis
