@@ -8,6 +8,10 @@ BOWER_NAMESPACE=FileThis
 # Project targets
 include project-application.make
 
-.PHONY: bower-register-public
-bower-register-public:  ## Register element in public Bower registry
-	@bower Project ${NAME} is private;
+.PHONY: serve-mkdocs
+serve-mkdocs:  ## Serve the documentation using mkdocs
+	@mkdocs serve
+
+.PHONY: open-mkdocs
+open-mkdocs:  ## Open the served mkdocs documentation in browser
+	@open http://127.0.0.1:8000

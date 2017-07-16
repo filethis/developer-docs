@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: FileThis Developer Docs
+
+pages:
+    - 'Home': 'index.md'
+    - 'Connect Demo': 'ft-connect-demo.md'
+    - 'Connect Minimal Site': 'ft-connect-minimal.md'
