@@ -1,18 +1,14 @@
-## What is this good for?
+# The FileThis Connect Minimal Site
 
-Assume you've already used the demo app
+FileThis provides a Polymer application named `ft-connect-minimal-site` whose purpose is to serve as a stepping-stone between running a FileThis Connect web component that is hosted by us to embedding the component into your own website and services. You can think of this project as a stripped-down version of the `ft-connect-demo` app which you have already played with. There is no support in this app for creating a FileThis user account and user access token, as there is in the `ft-connect-demo` app. Instead, you'll simply paste pre-created user account id and access token strings into the component attributes in a simple HTML page. Later, when you embed the component into your own site, you can likewise hardcode these attributes, at first, and then move on to adding business logic to obtain them using calls to our API.
 
-The point of this project is to act as a stepping-stone between running the component hosted on our service to yours. When you're done, you'll have all the tooling in place to be able to embed, and you'll have an understanding of what your site needs to inject into the component.
-
-Say you should start with the demo app. In fact, you'll need to use that to obtain a user access token to embed in this minimal app.
-
-In the end, you will just be adding an element to your HTML page to embed. The element needs to import some other elements that it makes use of. The setup instructions below explain how to get copies of these supporting files.
-
-The instructions that follow assume a Linux or OS X shell environment.
+Aside from illustrating the simplicity of embeddeding the component element on a page, when you finish the instructions below you will have installed a number of development tools that you will need when you proceed to embedding the component into your own site.
 
 ## Development Environment Setup
 
-There are a couple of tools you'll need to use to bootstrap the support for the drop-in.
+There are a number of tools you'll need to install to support bootstrapping the `ft-connect-minimal-site` project and running it on your dev machine.
+
+The following instructions assume you have a Unix-like shell environment, but should work without too much trouble on a Windows box, as well. Feedback about how to improve the instructions for the Windows platform is welcomed.
 
 ### Install the Node Package Manager
 
@@ -54,7 +50,7 @@ In order to run the minimal app, you'll need to serve its project files so that 
 
 #### BrowserSync
 
-[BrowserSync](https://www.browsersync.io/) is a personal favorite and is recommended. Among several nifty features the very bestest one is that it will automatically reload the page when a served file changes. Makes development a joy, frankly. Make a change in your editor, save it, see the page rerender with the change.
+[BrowserSync](https://www.browsersync.io/) is a personal favorite at FileThis and is highly recommended. Among several nifty features is one that automatically reloads the page when any served file changes —Make a change in your editor, save it, see the page rerender with the change.
 
 Install with:
 
@@ -64,7 +60,7 @@ and run with:
 
     browser-sync start --config "bs-config.js" --server --port 3505
 
-Note that if you want to the use the configuration options in the _bs-config.js_ file, you will need to run this from inside your ft-connect-minimal-site project directory. If you don't use this file, you'll need to either define your own, or add configuration options to the command line.
+Note that if you want to the use the configuration options in the _bs-config.js_ file, you will need to run this from inside your `ft-connect-minimal-site` project directory. If you don't use this file, you'll need to either define your own, or add configuration options to the command line.
 
 Actually, you can take advantage of BrowserSync's automatic loading feature even if you choose to use your own webserver, or one of the options listed below by using its "proxy" feature.
 
@@ -109,7 +105,7 @@ Assuming you already have PHP installed, run with:
      
 ## Runtime Environment Setup
 
-Now you're ready to download the _ft-connect-minimal-site_ code to your development machine and install the libraries that it needs to run.
+Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that it needs to run.
 
 #### Get the project source code
 
@@ -127,15 +123,15 @@ Now we can use Bower to download and install all the other polymer elements that
 
 If you're curious, take a look at the list of dependencies in the _bower.json_ file in the project directory. The _bower_ command will read each of these in turn and pull down not only these dependencies, but any dependencies of the listed packages, recursively.
 
-While still inside your _ft-connect-minimal-site_ directory, install the dependencies by running:
+While still inside your `ft-connect-minimal-site` directory, install the dependencies by running:
 
     bower install
 
 You will see a lot of progress information go by. It should complete without error, or interruption.
 
-When done, take a look in your project directory and observe that there is a new directory called "bower_components". This should be full of a number of Polymer components that the project depends on.
+When done, take a look in your project directory and observe that there is a new directory called _bower_components_. This should be full of a number of Polymer components that the project depends on.
 
-For future reference, you will need to deploy a copy of the "bower_components" directory to your production server so that your chosen FileThis Connect component can load the elements that it needs.
+For future reference, you will need to deploy a copy of the _bower_components_ directory to your production server so that your chosen FileThis Connect component can load the elements that it needs.
 
 
 ## Runtime configuration
@@ -162,7 +158,7 @@ Fortunately, browser manufacturers have provided a way to make specific exceptio
  3. Upon receiving this _OPTIONS_ request, the server reads the domain name and port from the request's _ORIGIN_ header (_http://localhost:3505_, in our case) and looks this up in an internal whitelist table of some kind. If it finds a match, it responds with success to the _OPTIONS_ request using a 200 result code. If it does not find a match, it returns with a non-200 response. We mention in passing that there are other request and response headers which further refine what the requestor is asking to do and, in turn, what server will allow.
  4. When it receives a 200 response to its _OPTIONS_ preflight request, the browser then sends the original request, and things proceed normally.
  
-To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for the address: "http://localhost:3505" so that developers can run the _ft-connect-minimal-site_ component out of the box. For this reason, be sure that your webserver serves your copy of the project files using the port number 3505.
+To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for the address: "http://localhost:3505" so that developers can run the `ft-connect-minimal-site` component out of the box. For this reason, be sure that your webserver serves your copy of the project files using the port number 3505.
 
 At this point, you may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThis Connect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until this is released, you can either:
 
@@ -171,8 +167,6 @@ At this point, you may be wondering how things are handled once you move your co
 
 ### Next steps
 
-You've already used the demo app, and now brought up the minimal app. The next logical step is to actually embed an instance of the FileThis Connect element into your own website.
+You've already used the `ft-connect-demo`  app, and now brought up the minimal app. The next logical step is to actually embed an instance of the FileThis Connect element into your own website.
 
 We suggest starting by embedding this minimal element, hardcoded account ID, user access token, and all. Then proceeding to the task of writing code in your system to obtain these programmatically.
-
-Go on to sketch out which API calls to make? Or refer to another document?
