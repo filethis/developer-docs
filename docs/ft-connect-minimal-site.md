@@ -136,7 +136,7 @@ For future reference, you will need to deploy a copy of the _bower_components_ d
 
 ## Runtime configuration
 
-True to its name, this project is minimal in the sense that it does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.
+True to its name, this project is "minimal" in the sense that it does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.
 
 #### Get an account ID and user access token
 
