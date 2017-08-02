@@ -3,8 +3,8 @@
   "description": "A project that defines a static internal site for partner devs. The main site at https://developer.filethis.com will link to it.",
   "main": "index.html",
   "dependencies": {
-    "ft-error-behavior": "filethis/ft-error-behavior#^0.0.9",
-    "ft-http-behavior": "filethis/ft-http-behavior#^0.0.9",
+    "ft-error-behavior": "filethis/ft-error-behavior#^0.0.10",
+    "ft-http-behavior": "filethis/ft-http-behavior#^0.0.10",
     "iron-label": "PolymerElements/iron-label#1 - 2",
     "iron-list": "PolymerElements/iron-list#1 - 2",
     "marked-element": "PolymerElements/marked-element#1 - 2",
