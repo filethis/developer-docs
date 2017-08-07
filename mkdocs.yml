@@ -2,5 +2,9 @@ site_name: FileThis Developer Docs
 
 pages:
     - 'Home': 'index.md'
-    - 'FileThisConnect Demo': 'ft-connect-demo.md'
-    - 'FileThisConnect Minimal Site': 'ft-connect-minimal-site.md'
+    - FileThisConnect Webcomponent:
+        - 'FileThisConnect Demo': 'ft-connect-demo.md'
+        - 'FileThisConnect Minimal Site': 'ft-connect-minimal-site.md'
+    - FileThis API Integration:
+        - 'First': 'ft-api-first.md'
+        - 'Second': 'ft-api-second.md'

@@ -1,18 +1,30 @@
-# The FileThisConnect Minimal Site
+# FileThisConnect Minimal Site
 
-FileThis provides a Polymer application named `ft-connect-minimal-site` whose purpose is to serve as a stepping-stone between running a FileThisConnect web component example that is hosted by us to embedding the component into your own website and services. You can think of this project as a stripped-down version of the `ft-connect-demo` app which you have already played with. There is no support in this app for creating a FileThis user account and user access token, as there is in the `ft-connect-demo` app. Instead, you'll simply paste pre-created user account id and access token strings into the component attributes in a simple HTML page. Later, when you embed the component into your own site, you can likewise hardcode these attributes, at first, and then move on to adding business logic on your side to obtain them using calls to our API.
+### What this is
+
+FileThis provides a Polymer application named `ft-connect-minimal-site` whose purpose is to serve as a stepping-stone between running a FileThisConnect web component example that is hosted by us to embedding the component into your own website and services. You can think of this project as a stripped-down version of the `ft-connect-demo` that you host locally, on your development machine. There is no support in this app for creating a FileThis user account and user access token, as there is in the `ft-connect-demo` app. Instead, you'll simply paste pre-created user account id and access token strings into the component attributes in a simple HTML page. Later, when you embed the component into your real website, your code will need obtain these values by calling our API and then inject them into the component.
+
+### What it is for
 
 In addition to illustrating the simplicity of embeddeding the component element into a page, when you finish the instructions below you will have installed a number of development tools that you'll need later when you proceed to embedding the component into your own site.
+
+### Prerequisites
+
+You should have completed the previous section, The FileThis Connect Demo. You will need to use that app to obtain a user account ID and access token for use in this section.
+
+### When you're done
+
+You will go on to the next section, foobar, having set up your dev env...
 
 ## Development Environment Setup
 
 There are a number of tools you'll need to install to support bootstrapping the `ft-connect-minimal-site` project and running it on your dev machine.
 
-The following instructions assume you have a Unix-like shell environment, but should work without too much trouble on a Windows box, as well. Feedback about how to improve the instructions for the Windows platform is welcomed.
+The following instructions assume you have a Unix-like shell environment, but should work without too much trouble on a Windows box, as well. Feedback about how to improve the instructions for the Windows platform is welcome.
 
 ### Install the Node Package Manager
 
-The Node Package Manager (NPM) makes it easy to download and install Javascript tools and libraries from the command line. We need it for just one reason: to install a tool called Bower, which is itself another package manager. Bower is used by the Polymer platform (though there is talk about moving to NPM, instead).
+The Node Package Manager (NPM) makes it easy to download and install Javascript tools and libraries from the command line. We need it for just one reason: to install a tool called Bower, which is yet another package manager. Bower is used by Polymer (though there is talk about moving to NPM, instead).
 
 The easiest way to install the _npm_ command line tool is to install the whole NodeJS package. You can get the installer from [here](https://nodejs.org/en/).
 
@@ -127,7 +139,7 @@ While still inside your `ft-connect-minimal-site` directory, install the depende
 
     bower install
 
-You will see a lot of progress information go by. It should complete without error, or interruption.
+You will see a lot of progress information go by. It should complete without error or interruption.
 
 When done, take a look in your project directory and observe that there is a new directory called _bower_components_. This should be full of a number of Polymer components that the project depends on.
 
@@ -165,7 +177,7 @@ At this point, you may be wondering how things are handled once you move your co
 1. Use the FileThis API to [read](https://filethis.com/developers/doc/index.html#!/partners/getPartnerUsingGET) and [update](https://filethis.com/developers/doc/index.html#!/partners/updatePartnerUsingPUT) the "cors" property of your "partner" resource. (If you have more than one domain, use a comma to separate each of them.)
 2. Just send us a list of your addresses and we will update your whitelist for you.
 
-### Next steps
+## Next steps
 
 You've already used the `ft-connect-demo`  app, and now brought up the minimal app. The next logical step is to actually embed an instance of the FileThisConnect element into your own website.
 
