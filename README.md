@@ -1,17 +1,10 @@
-[App](https://filethis.github.io/partner-site)    [Repo](https://github.com/filethis/partner-site)
+# developer-docs
 
-# \<partner-site\>
+We are currently publishing our partner developer documentation on [Read the Docs](https://readthedocs.org/) [here](http://filethis-developer.readthedocs.io/en/latest/)
 
-Currently, we are using this repository as a MkDocs project, not a Polymer project, though that may change.
+Documentation pages are written in Markdown. The site structure is defined by [MkDocs](http://www.mkdocs.org/) using a [mkdocs.yml](https://github.com/filethis/developer-docs/blob/master/mkdocs.yml) file.
 
-To see the published documentation on [Read the Docs](https://readthedocs.org/), go [here](http://filethis-developer.readthedocs.io/en/latest/).
+The Makefile in this project provides targets that are similar to the convention we use in our Polymer projects. To see documentation of the targets, use:
 
-You can serve a copy of the documentation locally.
+    make
 
-Install MkDocs with:
-
-    make install-mkdocs
-
-and serve the documentation pages with:
-
-    make serve-mkdocs
