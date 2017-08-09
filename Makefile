@@ -1,23 +1,30 @@
+# Project configuration
+
+NAME=developer-docs
+VERSION=0.0.1
+LOCAL_PORT=1025
+
+
 # Running -----------------------------------------------------------------------------------
 
 .PHONY: serve
 serve:  ## Serve the documentation locally using mkdocs command
-	@mkdocs serve
+	@mkdocs serve --dev-addr=0.0.0.0:${LOCAL_PORT}
 
-.PHONY: run
-run:  ## Run the documentation locally using mkdocs command
-	@open http://127.0.0.1:8000
+.PHONY: open
+open:  ## Open locally-served documentation in browser
+	@open http://127.0.0.1:${LOCAL_PORT}
 
 
 # GitHub Repository -----------------------------------------------------------------------------------
 
 .PHONY: open-repo
 open-repo:  ## Open URL of project GitHub repository page
-	@open https://github.com/filethis/developer-docs
+	@open https://github.com/filethis/${NAME}
 
 .PHONY: url-repo
 url-repo:  ## Print URL of project GitHub repository page
-	@echo https://github.com/filethis/developer-docs
+	@echo https://github.com/filethis/${NAME}
 
 
 # Application -----------------------------------------------------------------------------------
@@ -34,11 +41,11 @@ url-app:  ## Print URL of the published documentation
 # Release -----------------------------------------------------------------------------------
 
 .PHONY: release
-release:  ## Publish static files in GitHub Pages for this project
-	@xxxx;
+release: publish-github-pages  ## Publish static files in GitHub Pages for this project
+	@echo Released version ${VERSION};
 
 .PHONY: publish-github-pages
-publish-github-pages: build-app
+publish-github-pages:
 	@bin_dir="$$(dirname `which gh-pages`)"; \
 	parent_dir="$$(dirname $$bin_dir)"; \
 	lib_dir=$$parent_dir/lib; \
@@ -47,7 +54,7 @@ publish-github-pages: build-app
 		--repo https://github.com/filethis/${NAME}.git \
 		--branch gh-pages \
 		--silent \
-		--dist ./build/default; \
+		--dist ./docs; \
 	echo Published version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME};
 
 
