@@ -1,3 +1,5 @@
+# FileThisConnect Demo
+
 The _FileThisConnect Demo_ is a single-page application served from _filethis.com_ that embeds an instance of the FileThisConnect web component element. It is a fixture that wraps a UI around the component, letting you configure, control, and play with the instance. All you need to make it work are your FileThis partner account API key and API secret strings. You can obtain copies of these strings by copying them out of your FileThis partner admin console. If you have not yet gotten set up with your own partner account, please contact us.
 
 The purpose of the demo app is to let you get familiar with how the available variants of the web component appear and behave, and how they guide users through complete document fetching workflows, without yet looking "under the hood" to see how the web component element is wired up.
