@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36490fdc-3bf6-4d37-ac8a-cda3d2721bf3" name="Default" comment="" />
+    <list default="true" id="36490fdc-3bf6-4d37-ac8a-cda3d2721bf3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ft-connect-demo.md" afterPath="$PROJECT_DIR$/docs/ft-connect-demo.md" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,12 +24,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ft-into-partner-website.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ft-into-partner-website.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/ft-into-partner-website.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <first_editor relative-caret-position="240">
+                <caret line="10" column="110" lean-forward="true" selection-start-line="10" selection-start-column="110" selection-end-line="10" selection-end-column="110" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -45,12 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ft-connect-demo.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ft-connect-demo.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/ft-connect-demo.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="358">
-                <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -62,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/docs/ft-connect-minimal-site.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="4" column="455" lean-forward="false" selection-start-line="4" selection-start-column="455" selection-end-line="4" selection-end-column="455" />
+              <first_editor relative-caret-position="195">
+                <caret line="4" column="297" lean-forward="false" selection-start-line="4" selection-start-column="297" selection-end-line="4" selection-end-column="297" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -89,9 +91,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/docs/ft-connect-minimal-site.md" />
-        <option value="$PROJECT_DIR$/docs/ft-connect-demo.md" />
         <option value="$PROJECT_DIR$/docs/ft-into-parther-website.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/docs/ft-connect-demo.md" />
       </list>
     </option>
   </component>
@@ -296,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502293220900</updated>
       <workItem from="1502293222544" duration="4464000" />
-      <workItem from="1502307037827" duration="10384000" />
+      <workItem from="1502307037827" duration="11851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14848000" />
+    <option name="totallyTimeSpent" value="16315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1016" extended-state="0" />
@@ -425,17 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ft-connect-demo.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="358">
-            <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -447,8 +438,19 @@
     <entry file="file://$PROJECT_DIR$/docs/ft-connect-minimal-site.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="4" column="455" lean-forward="false" selection-start-line="4" selection-start-column="455" selection-end-line="4" selection-end-column="455" />
+          <first_editor relative-caret-position="195">
+            <caret line="4" column="297" lean-forward="false" selection-start-line="4" selection-start-column="297" selection-end-line="4" selection-end-column="297" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ft-into-partner-website.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="240">
+            <caret line="10" column="110" lean-forward="true" selection-start-line="10" selection-start-column="110" selection-end-line="10" selection-end-column="110" />
             <folding />
           </first_editor>
           <second_editor />
@@ -463,11 +465,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ft-into-partner-website.md">
+    <entry file="file://$PROJECT_DIR$/docs/ft-connect-demo.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
-            <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
