@@ -2,7 +2,6 @@ site_name: FileThis Developer Docs
 
 pages:
     - 'Home': 'index.md'
-    - Webcomponent Integration:
-        - 'Step One: Demo App': 'ft-connect-demo.md'
-        - 'Step Two: Minimal Site App': 'ft-connect-minimal-site.md'
-        - 'Step Three: Into Your Website': 'ft-into-partner-website.md'
+    - 'Step One: Demo App': 'ft-connect-demo.md'
+    - 'Step Two: Minimal Site App': 'ft-connect-minimal-site.md'
+    - 'Step Three: Into Your Website': 'ft-into-partner-website.md'
