@@ -1,20 +1,10 @@
 # FileThisConnect Minimal Site
 
-## What this is
+The _FileThisConnect Minimal Site_ is a simple website that embeds an instance of the FileThisConnect web component element. Unlike the _FileThisConnect Demo_ application that you used in the [previous section](ft-connect-demo.md), this website will be served from your own development machine, not from _filethis.com_. Because you'll have the site's source files, you'll be able to see just how simple the embedding is. Also, when you've finished, you'll have installed a number of development tools that you'll need in the final section. 
 
-FileThis provides a Polymer application named `ft-connect-minimal-site` whose purpose is to serve as a stepping-stone between running a FileThisConnect web component example that is hosted by us to embedding the component into your own website and services. You can think of this project as a stripped-down version of the `ft-connect-demo` that you host locally, on your development machine. There is no support in this app for creating a FileThis user account and user access token, as there is in the `ft-connect-demo` app. Instead, you'll simply paste pre-created user account id and access token strings into the component attributes in a simple HTML page. Later, when you embed the component into your real website, your code will need obtain these values by calling our API and then inject them into the component.
+True to its name, this website is "minimal" in that there is no support in it for creating a FileThis user account or user access token, as there was in the _FileThisConnect Demo_ fixture's UI. You'll simply paste pre-created user account id and access token strings into the component's element attributes in the main HTML file. In the next section, where you embed the component into your actual website, your code will obtain these values by calling our API and then injecting them into the component programmatically.
 
-## What it is for
-
-In addition to illustrating the simplicity of embeddeding the component element into a page, when you finish the instructions below you will have installed a number of development tools that you'll need later when you proceed to embedding the component into your own site.
-
-## Prerequisites
-
-You should have completed the previous section, The FileThis Connect Demo. You will need to use that app to obtain a user account ID and access token for use in this section.
-
-## When you're done
-
-You will go on to the next section, foobar, having set up your dev env...
+All of the FileThis web components, sub-components, demo and sample applications are available as open source in public GitHub repositories. The code for this website, named `ft-connect-minimal-site` lives [here](https://github.com/filethis/ft-connect-minimal-site). The instructions below will ask you to download a copy of it to your machine.
 
 ## Development Environment Setup
 
@@ -148,11 +138,11 @@ For future reference, you will need to deploy a copy of the _bower_components_ d
 
 ## Runtime configuration
 
-True to its name, this project is "minimal" in the sense that it does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.
+As mentioned above, this project does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.
 
 #### Get an account ID and user access token
 
-We assume you are already set up with a FileThis partner account and are familiar with the [ft-connect-demo](https://filethis.github.io/ft-connect-demo) application. Go to that app now and copy a valid FileThis account id and a user access token. You might create a fresh token so that it does not expire anytime soon.
+Use the [FileThisConnect Demo](https://filethis.github.io/ft-connect-demo/) application now and copy a valid FileThis account id and a user access token from it. You may want to create a fresh token so that it does not expire anytime soon.
 
 #### Configure the account ID and user access token
 
@@ -170,15 +160,10 @@ Fortunately, browser manufacturers have provided a way to make specific exceptio
  3. Upon receiving this _OPTIONS_ request, the server reads the domain name and port from the request's _ORIGIN_ header (_http://localhost:3505_, in our case) and looks this up in an internal whitelist table of some kind. If it finds a match, it responds with success to the _OPTIONS_ request, returning a 200 result code. If it does not find a match, it returns with a non-200 response. We mention in passing that there are other request and response headers which further refine what the requestor is asking to do and, in turn, what server will allow.
  4. When it receives a 200 response to its _OPTIONS_ preflight request, the browser then sends the original request, and things proceed normally.
  
-To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for the address: "http://localhost:3505" so that developers can run the `ft-connect-minimal-site` component out of the box. For this reason, be sure that your webserver serves your copy of the project files using the port number 3505.
+To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for any http or https URL that uses the _localhost_ domain (on any port) so that developers can run our demo and sample applications out of the box.
 
-At this point, you may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until this is released, you can either:
-
-1. Use the FileThis API to [read](https://filethis.com/developers/doc/index.html#!/partners/getPartnerUsingGET) and [update](https://filethis.com/developers/doc/index.html#!/partners/updatePartnerUsingPUT) the "cors" property of your "partner" resource. (If you have more than one domain, use a comma to separate each of them.)
-2. Just send us a list of your addresses and we will update your whitelist for you.
+You may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until then, please send us a list of your addresses and we will update your whitelist for you.
 
 ## Next steps
 
-You've already used the `ft-connect-demo`  app, and now brought up the minimal app. The next logical step is to actually embed an instance of the FileThisConnect element into your own website.
-
-We suggest starting by embedding this minimal element, hardcoded account ID, user access token, and all. Then proceeding to the task of writing code in your system to obtain these programmatically.
+You've now brought up the minimal app and have installed a number of development tools. The next section will help guide you through actually embed an instance of the FileThisConnect element into your own website.

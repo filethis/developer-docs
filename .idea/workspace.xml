@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36490fdc-3bf6-4d37-ac8a-cda3d2721bf3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/ft-into-parther-website.md" afterPath="$PROJECT_DIR$/docs/ft-into-partner-website.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
-    </list>
+    <list default="true" id="36490fdc-3bf6-4d37-ac8a-cda3d2721bf3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -299,12 +296,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502293220900</updated>
       <workItem from="1502293222544" duration="4464000" />
-      <workItem from="1502307037827" duration="9447000" />
+      <workItem from="1502307037827" duration="10384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13911000" />
+    <option name="totallyTimeSpent" value="14848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1016" extended-state="0" />
