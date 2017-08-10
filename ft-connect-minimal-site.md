@@ -1,18 +1,18 @@
 # FileThisConnect Minimal Site
 
-### What this is
+## What this is
 
 FileThis provides a Polymer application named `ft-connect-minimal-site` whose purpose is to serve as a stepping-stone between running a FileThisConnect web component example that is hosted by us to embedding the component into your own website and services. You can think of this project as a stripped-down version of the `ft-connect-demo` that you host locally, on your development machine. There is no support in this app for creating a FileThis user account and user access token, as there is in the `ft-connect-demo` app. Instead, you'll simply paste pre-created user account id and access token strings into the component attributes in a simple HTML page. Later, when you embed the component into your real website, your code will need obtain these values by calling our API and then inject them into the component.
 
-### What it is for
+## What it is for
 
 In addition to illustrating the simplicity of embeddeding the component element into a page, when you finish the instructions below you will have installed a number of development tools that you'll need later when you proceed to embedding the component into your own site.
 
-### Prerequisites
+## Prerequisites
 
 You should have completed the previous section, The FileThis Connect Demo. You will need to use that app to obtain a user account ID and access token for use in this section.
 
-### When you're done
+## When you're done
 
 You will go on to the next section, foobar, having set up your dev env...
 
