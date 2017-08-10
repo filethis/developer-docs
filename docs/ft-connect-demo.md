@@ -6,13 +6,13 @@ The purpose of the demo app is to let you get familiar with how the available va
 
 Once you've completed this section you'll be ready to move on to the next, in which you'll learn how to embed the FileThisConnect web component element into a very simple website that you serve from your development machine.
 
-## Instructions
+## Loading the App
 
 Start by loading the the demo app into your browser from [here](https://filethis.github.io/ft-connect-demo/).
 
 Note that the values you enter into most of the fields in this app will be stored in the browser local storage for your convenience. When you visit the page again, or refresh it, the fields will retain the values you entered previously. Fields which contain secrets are not stored with encryption. If you're not comfortable with leaving them there between sessions, you may click the "Clear" button at the bottom right of the configuration panel when you're done working.
 
-#### Configuration
+## Configuration
 
 1. If the configuration side-panel on the left of the window is not open, click the right-pointing arrow button at the upper left of the window to open it.
 2. Copy and paste both your API key and API secret strings into the labeled fields.
@@ -26,7 +26,7 @@ Note that the values you enter into most of the fields in this app will be store
 10. Observe that there are two "variants" of the FileThisConnect component available under the popup menu in the middle of the header bar of the main panel. These are: _ft-connect-expand-out_ and _ft-connect-tabbed_. The former lets the user see a number of panels on the screen at the same time, expanding out to the right side of the component for each panel. The latter makes better use of screen real estate, placing each panel into a tab bar. You can chose the variant to use now, and you can change it later, once the component is running. Other variants will be available shortly.
 
 
-#### Bringing the Component to Life
+## Bringing the Component to Life
 
 Having created a user account and user token, these will be injected into the instance of the FileThisConnect component for you. The main panel of the demo app is where the component is embedded. To turn it on, click the "power" button at the top right of the window. You should see the component appear, showing a list of company logos for websites from which we can fetch documents. The component is now "alive" and communicating with the FileThis production server.
 
@@ -34,7 +34,7 @@ If an error occurs during the use of the component instance, an error dialog wil
 
 Depending on which variant of the component you selected, you will see one or more of the "panel" sub-components at different points in the user workflows. We describe each of these, next.
 
-#### The "Sites" Panel
+## The "Sites" Panel
 
 The first step in any FileThis user workflow is to allow the user to find and select a company website from which they can fetch their documents. The FileThisConnect web component variants all begin by presenting the user with a list of all companies to which we can connect. We have a sub-component named [ft-source-panel](https://filethis.github.io/ft-source-panel/components/ft-source-panel/) which provides this functionality.
 
@@ -49,7 +49,7 @@ Password: bills
 
 Or, you can cause the site to challenge you with any of several kinds of questions. [This page](https://filethis.github.io/developer-docs/pdfs/filethis-test-site-usage.pdf) documents the variety of use cases that the test site can simulate.
 
-#### The "Connections" Panel
+## The "Connections" Panel
 
 Having created a connection, either to our test site, or a real-world company site, you will see a representation of the connection appear in a list in the next panel —an instance of our [ft-connection-panel](https://filethis.github.io/ft-connection-panel/components/ft-source-panel/) subcomponent.
 
@@ -63,7 +63,7 @@ Our test site provides a convenient and deterministic way to test a variety of w
 
 If you're curious about the internal representation of challenge questions used by FileThis, take a look at [this application](https://filethis.github.io/ft-user-interactions-demo/). The left-side column shows the JSON data that represents the question. The center column is a live instance of our [ft-user-interaction-form](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/) sub-component which dynamically renders the question data as a modal dialog. The right-side column displays the JSON data that represents the answer that the user enters into the dialog.
 
-#### The "Documents" Panel
+## The "Documents" Panel
 
 We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-connection-panel/components/ft-document-panel/) subcomponent. The display of this panel is optional, but it gives the user a rewarding sense that real work is being done on their behalf.
 
