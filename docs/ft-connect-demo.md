@@ -23,7 +23,7 @@ Note that the values you enter into most of the fields in this app will be store
 7. Create a user access token for the account by clicking the "New" button to the right of the "Token" field.
 8. Observe that a token string appears in the field.
 9. Test the validity of the token by clicking the "Test" button to the right of the field. This is useful for testing whether your token has expired, or not before using it for additional testing.
-10. Observe that there are two "variants" of the FileThisConnect web component available under the popup menu in the middle of the header bar of the main panel. These are: _ft-connect-expand-out_ and _ft-connect-tabbed_. The former lets the user see a number of panels on the screen at the same time, expanding out to the right side of the web component element for each panel. The latter makes better use of screen real estate, placing each panel into a tab bar. You can chose the variant to use now, and you can change it later, once the web component is running. Other variants will be available shortly.
+10. Observe that there are two "variants" of the FileThisConnect web component available under the popup menu in the middle of the header bar of the main panel. These are: _ft-connect-expand-out_ and _ft-connect-tabbed_. The former lets the user see a number of panels on the screen at the same time, expanding out to the right side of the web component element for each panel. The latter makes better use of screen real estate, placing each panel into a tab bar. You can chose the variant to use now, and you can change it later, even when the web component is active. Other variants will be available shortly.
 
 
 ## Bringing the Web Component to Life
@@ -51,7 +51,7 @@ Or, you can cause the site to challenge you with any of several kinds of questio
 
 ## The "Connections" Panel
 
-Having created a connection, either to our test site, or a real-world company site, you will see a representation of the connection appear in a list in the next panel —an instance of our [ft-connection-panel](https://filethis.github.io/ft-connection-panel/components/ft-source-panel/) subcomponent.
+Having created a connection, either to our test site, or a real-world company site, you will see a representation of the connection appear in a list in the next panel —an instance of our [ft-connection-panel](https://filethis.github.io/ft-connection-panel/components/ft-connection-panel/) subcomponent.
 
 As soon as a connection is created, our server kicks off the first document fetching job for it. This takes about as long to complete as it would take a speedy user to log in directly to the company site in their web browser, navigate to the download page, click the appropriate button to start the download, wait for available documents in a certain date range to finish downloading, and then log out. Because this process isn't instantaneous, the web component provides feedback to users to give them a sense of progress and to show them that they're being saved from having to do some rather tedious manual work.
 

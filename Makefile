@@ -52,7 +52,7 @@ url-site:  ## Print URL of the published documentation
 # Release -----------------------------------------------------------------------------------
 
 .PHONY: release
-release: publish-github-pages  ## Publish static files in GitHub Pages for this project
+release:  ## Publish static files in GitHub Pages for this project
 	@mkdocs gh-deploy
 
 
