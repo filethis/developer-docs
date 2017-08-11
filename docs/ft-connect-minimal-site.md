@@ -4,7 +4,7 @@ The _FileThisConnect Minimal Site_ is a simple website that embeds an instance o
 
 True to its name, this website is "minimal" in that there is no support in it for creating a FileThis user account or user access token, as there was in the _FileThisConnect Demo_ fixture's UI. You'll simply paste pre-created user account id and access token strings into the component's element attributes in the main HTML file. In the next section, where you embed the component into your actual website, your code will obtain these values by calling our API and then injecting them into the component programmatically.
 
-All of the FileThis web components, sub-components, demo and sample applications are available as open source in public GitHub repositories. The code for this website, named `ft-connect-minimal-site` lives [here](https://github.com/filethis/ft-connect-minimal-site). The instructions below will ask you to download a copy of it to your machine.
+All of the FileThis web components, sub-components, demo and sample applications are available as open source in public GitHub repositories. The code for this website, named `ft-connect-minimal-site`, lives [here](https://github.com/filethis/ft-connect-minimal-site). The instructions below will ask you to download a copy of it to your machine.
 
 ## Development Environment Setup
 
@@ -133,16 +133,13 @@ You will see a lot of progress information go by. It should complete without err
 
 When done, take a look in your project directory and observe that there is a new directory called _bower_components_. This should be full of a number of Polymer components that the project depends on.
 
-For future reference, you will need to deploy a copy of the _bower_components_ directory to your production server so that your chosen FileThisConnect component can load the elements that it needs.
-
-
 ## Runtime configuration
 
 As mentioned above, this project does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.
 
 #### Get an account ID and user access token
 
-Use the [FileThisConnect Demo](https://filethis.github.io/ft-connect-demo/) application now and copy a valid FileThis account id and a user access token from it. You may want to create a fresh token so that it does not expire anytime soon.
+Open the [FileThisConnect Demo](https://filethis.github.io/ft-connect-demo/) application now and copy a valid FileThis account id and a user access token from it. You may want to create a fresh token so that it does not expire anytime soon.
 
 #### Configure the account ID and user access token
 

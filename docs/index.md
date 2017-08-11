@@ -1,12 +1,7 @@
 # Welcome!
 
-We are rebuilding our developer documentation. As we move information from our old site and add new information, it will appear here.
+You've reached the landing page for the FileThis developer documentation.
 
-We have divided this into three steps:
+We are still in the process off reworking things to support our new web components, but we have detailed instructions here to get you started.
 
-[Step One: Demo App](ft-connect-demo.md)
-
-[Step Two: Minimal Site App](ft-connect-minimal-site.md)
-
-[Step Three: Into Your Website](ft-into-partner-website.md)
-
+Please use the table of contents in the sidebar to the left to work your way through the three steps that will take you through the process of embedding the FileThisConnect web component into the user workflow on your website.
