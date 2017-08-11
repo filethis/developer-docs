@@ -1,9 +1,7 @@
 site_name: FileThis Developer Docs
-
-theme: readthedocs
-
 pages:
-    - 'Homeeee': 'index.md'
-    - 'Step One: Demo App': 'ft-connect-demo.md'
-    - 'Step Two: Minimal Site App': 'ft-connect-minimal-site.md'
-    - 'Step Three: Into Your Website': 'ft-into-partner-website.md'
+- 'Homeeee': index.md
+- 'Step One: Demo App': ft-connect-demo.md
+- 'Step Two: Minimal Site App': ft-connect-minimal-site.md
+- 'Step Three: Into Your Website': ft-into-partner-website.md
+theme: readthedocs
