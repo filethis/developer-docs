@@ -152,15 +152,15 @@ It may already have occurred to you to there is a potential problem here: Browse
 
 Fortunately, browser manufacturers have provided a way to make specific exceptions to the cross-domain restriction in a safe manner. They call this Cross-Origin Resource Sharing, or CORS, for short. In brief, it works like this:
  
- 1. When the browser is asked to send an HTTP request to an origin other than the one from which the site was originally loaded, it first builds a "preflight" request that has the same URL and contains all the same headers as the actual request.
+ 1. When the browser is asked to send an HTTP request to an origin other than the one from which the site was originally loaded, it first builds a "preflight" request that has the same URL and some of the same headers as the actual request.
  2. The browser sends its preflight request to the server using the _OPTIONS_ HTTP verb.
  3. Upon receiving this _OPTIONS_ request, the server reads the domain name and port from the request's _ORIGIN_ header (_http://localhost:3505_, in our case) and looks this up in an internal whitelist table of some kind. If it finds a match, it responds with success to the _OPTIONS_ request, returning a 200 result code. If it does not find a match, it returns with a non-200 response. We mention in passing that there are other request and response headers which further refine what the requestor is asking to do and, in turn, what server will allow.
  4. When it receives a 200 response to its _OPTIONS_ preflight request, the browser then sends the original request, and things proceed normally.
  
-To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for any http or https URL that uses the _localhost_ domain (on any port) so that developers can run our demo and sample applications out of the box.
+To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for any _http_ or _https_ URL that uses the _localhost_ domain (on any port) so that developers can run our demo and sample applications out of the box.
 
 You may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until then, please send us a list of your addresses and we will update your whitelist for you.
 
 ## Next steps
 
-You've now brought up the minimal app and have installed a number of development tools. The next section will help guide you through actually embed an instance of the FileThisConnect element into your own website.
+You've now brought up the minimal app on your development box and have installed a number of development tools there. The next section will help guide you through actually embed an instance of the FileThisConnect element into your own website.
