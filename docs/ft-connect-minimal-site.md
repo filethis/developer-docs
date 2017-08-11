@@ -88,15 +88,15 @@ Assuming you already have Ruby installed, run with:
 
     ruby -run -ehttpd . -p3505
     
-#### node-static
+#### NodeJS static-server
 
 Install with:
 
-    npm install -g node-static
+    npm -g install static-server
 
 and run with:
 
-    ruby -run -ehttpd . -p3505
+    static-server --port 3505
 
 #### PHP 5.4+
 
@@ -105,7 +105,7 @@ Assuming you already have PHP installed, run with:
     php -S 127.0.0.1:3505
 
      
-## Runtime Environment Setup
+## Project setup
 
 Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that it needs to run.
 
@@ -119,7 +119,7 @@ Then move into the created project directory:
 
     cd ft-connect-minimal-site
 
-#### Install the dependent libraries
+#### Install the project's library dependencies
 
 Now we can use Bower to download and install all the other polymer elements that the app uses, as well as the small Polymer runtime support library.
 
