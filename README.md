@@ -1,6 +1,6 @@
 # developer-docs
 
-We are currently publishing our partner developer documentation on [Read the Docs](https://readthedocs.org/) [here](http://filethis-developer.readthedocs.io/en/latest/)
+Our developer documentation is published in the GitHub Pages of this repo: https://filethis.github.io/developer-docs/
 
 Documentation pages are written in Markdown. The site structure is defined by [MkDocs](http://www.mkdocs.org/) using a [mkdocs.yml](https://github.com/filethis/developer-docs/blob/master/mkdocs.yml) file.
 
