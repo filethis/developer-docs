@@ -16,6 +16,17 @@ open:  ## Open locally-served documentation in browser
 	@open http://127.0.0.1:${LOCAL_PORT}
 
 
+# Building -----------------------------------------------------------------------------------
+
+.PHONY: build-site
+build-site:  ## Build site
+	@mkdocs build
+
+.PHONY: clean-site
+clean-site:  ## Clean site
+	@mkdocs build  --clean
+
+
 # GitHub Repository -----------------------------------------------------------------------------------
 
 .PHONY: open-repo
@@ -29,12 +40,12 @@ url-repo:  ## Print URL of project GitHub repository page
 
 # Application -----------------------------------------------------------------------------------
 
-.PHONY: open-app
-open-app:  ## Open the published documentation in browser
+.PHONY: open-site
+open-site:  ## Open the published documentation in browser
 	@open http://filethis-developer.readthedocs.io/en/latest/
 
-.PHONY: url-app
-url-app:  ## Print URL of the published documentation
+.PHONY: url-site
+url-site:  ## Print URL of the published documentation
 	@echo http://filethis-developer.readthedocs.io/en/latest/;
 
 
@@ -42,7 +53,7 @@ url-app:  ## Print URL of the published documentation
 
 .PHONY: release
 release: publish-github-pages  ## Publish static files in GitHub Pages for this project
-	@echo Released version ${VERSION};
+	@mkdocs gh-deploy
 
 .PHONY: publish-github-pages
 publish-github-pages:

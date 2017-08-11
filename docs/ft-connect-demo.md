@@ -47,7 +47,7 @@ Username: user
 Password: bills
 ```
 
-Or, you can cause the site to challenge you with any of several kinds of questions. [This page](https://filethis.github.io/developer-docs/pdfs/filethis-test-site-usage.pdf) documents the variety of use cases that the test site can simulate.
+Or, you can cause the site to challenge you with any of several kinds of questions. [This page](https://filethis.github.io/developer-docs/pdf/filethis-test-site-usage.pdf) documents the variety of use cases that the test site can simulate.
 
 ## The "Connections" Panel
 
@@ -59,7 +59,7 @@ Note that an indeterminate progress indicator spins within the connection item t
 
 It's not uncommon for websites to pose challenge questions after users log in successfully with their username and password. These can be questions like "What is your mother's maiden name?", or multiple-choice questions, or a prompt for a PIN code. When our fetching service encounters such a question on a website, it must be conveyed to the user on your website by some means, so that it can be answered by them. The answer they provide must then be sent back to our fetching service so that the operation can resume. The FileThisConnect web component handles this back-and-forth for you, dynamically rendering a modal dialog on your website to pose the question to the user, collecting their answer, and returning it to our service.
 
-Our test site provides a convenient and deterministic way to test a variety of workflows that include challenge questions of different types. Again, [this document](https://filethis.github.io/developer-docs/pdfs/filethis-test-site-usage.pdf) tells you which fake password string to use to determine the workflow to simulate.
+Our test site provides a convenient and deterministic way to test a variety of workflows that include challenge questions of different types. Again, [this document](https://filethis.github.io/developer-docs/pdf/filethis-test-site-usage.pdf) tells you which fake password string to use to determine the workflow to simulate.
 
 If you're curious about the internal representation of challenge questions used by FileThis, take a look at [this application](https://filethis.github.io/ft-user-interactions-demo/). The left-side column shows the JSON data that represents the question. The center column is a live instance of our [ft-user-interaction-form](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/) sub-component which dynamically renders the question data as a modal dialog. The right-side column displays the JSON data that represents the answer that the user enters into the dialog.
 
