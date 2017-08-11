@@ -163,4 +163,4 @@ You may be wondering how things are handled once you move your code from your de
 
 ## Next steps
 
-You've now brought up the minimal app on your development box and have installed a number of development tools there. The next section will help guide you through actually embed an instance of the FileThisConnect element into your own website.
+You've now brought up the minimal app on your development box and have installed a number of development tools there. The next section will help guide you through actually embedding an instance of the FileThisConnect element into your own website.
