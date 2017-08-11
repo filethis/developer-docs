@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico">
+  
+  <title>Step Two: Minimal Site App - FileThis Developer Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Step Two: Minimal Site App";
+    var mkdocs_page_input_path = "ft-connect-minimal-site.md";
+    var mkdocs_page_url = "/ft-connect-minimal-site/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> FileThis Developer Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ft-connect-demo/">Step One: Demo App</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Step Two: Minimal Site App</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#filethisconnect-minimal-site">FileThisConnect Minimal Site</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#development-environment-setup">Development Environment Setup</a></li>
+        
+            <li><a class="toctree-l3" href="#runtime-environment-setup">Runtime Environment Setup</a></li>
+        
+            <li><a class="toctree-l3" href="#runtime-configuration">Runtime configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#next-steps">Next steps</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ft-into-partner-website/">Step Three: Into Your Website</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">FileThis Developer Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Step Two: Minimal Site App</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="filethisconnect-minimal-site">FileThisConnect Minimal Site</h1>
+<p>The <em>FileThisConnect Minimal Site</em> is a simple website that embeds an instance of the FileThisConnect web component element. Unlike the <em>FileThisConnect Demo</em> application that you used in the <a href="../ft-connect-demo/">previous section</a>, this website will be served from your own development machine, not from <em>filethis.com</em>. Because you'll have the site's source files, you'll be able to see just how simple the embedding is. Also, when you've finished, you'll have installed a number of development tools that you'll need in the final section. </p>
+<p>True to its name, this website is "minimal" in that there is no support in it for creating a FileThis user account or user access token, as there was in the <em>FileThisConnect Demo</em> fixture's UI. You'll simply paste pre-created user account id and access token strings into the component's element attributes in the main HTML file. In the next section, where you embed the component into your actual website, your code will obtain these values by calling our API and then injecting them into the component programmatically.</p>
+<p>All of the FileThis web components, sub-components, demo and sample applications are available as open source in public GitHub repositories. The code for this website, named <code>ft-connect-minimal-site</code> lives <a href="https://github.com/filethis/ft-connect-minimal-site">here</a>. The instructions below will ask you to download a copy of it to your machine.</p>
+<h2 id="development-environment-setup">Development Environment Setup</h2>
+<p>There are a number of tools you'll need to install to support bootstrapping the <code>ft-connect-minimal-site</code> project and running it on your dev machine.</p>
+<p>The following instructions assume you have a Unix-like shell environment, but should work without too much trouble on a Windows box, as well. Feedback about how to improve the instructions for the Windows platform is welcome.</p>
+<h3 id="install-the-node-package-manager">Install the Node Package Manager</h3>
+<p>The Node Package Manager (NPM) makes it easy to download and install Javascript tools and libraries from the command line. We need it for just one reason: to install a tool called Bower, which is yet another package manager. Bower is used by Polymer (though there is talk about moving to NPM, instead).</p>
+<p>The easiest way to install the <em>npm</em> command line tool is to install the whole NodeJS package. You can get the installer from <a href="https://nodejs.org/en/">here</a>.</p>
+<p>Once it's installed, verify that the <em>npm</em> command is available in your terminal by running:</p>
+<pre><code>npm --version
+</code></pre>
+<p>and observing that you are given a version number.</p>
+<h3 id="install-git">Install Git</h3>
+<p>Bower uses Git to store the code and version tags associated with the packages that it manages. The <em>git</em> command line tool must be installed on your machine in order for it to work.</p>
+<p>There are many ways to install Git on each platform. Follow <a href="https://git-scm.com/book/en/v1/Getting-Started-Installing-Git">this guide</a> to decide the best way for you. </p>
+<p>When you're done, verify that the <em>git</em> command is available in your terminal by running:</p>
+<pre><code>git --version
+</code></pre>
+<h3 id="install-bower">Install Bower</h3>
+<p>Next, we use NPM to install Bower. Run this command:</p>
+<pre><code>npm install -g bower
+</code></pre>
+<p>You should see some verbose progress information fly by as other packages that Bower depends on are installed, ending with some indication of success.</p>
+<p>Verify that you have the <em>bower</em> command available in your terminal by running:</p>
+<pre><code>bower --version
+</code></pre>
+<h3 id="choose-a-webserver">Choose a webserver</h3>
+<p>In order to run the <code>ft-connect-minimal-site</code> app, you'll need to serve its project files so that your browser can render them. If you already have a favorite local webserver of some kind, you can skip this step. If you don't, here are some options:</p>
+<h4 id="browsersync">BrowserSync</h4>
+<p><a href="https://www.browsersync.io/">BrowserSync</a> is a personal favorite at FileThis and is highly recommended. Among several nifty features is one that automatically reloads the page when any served file changes —Make a change in your editor, save it, see the page rerender with the change.</p>
+<p>Install with:</p>
+<pre><code>npm install -g browser-sync
+</code></pre>
+<p>and run with:</p>
+<pre><code>browser-sync start --config "bs-config.js" --server --port 3505
+</code></pre>
+<p>Note that if you want to the use the configuration options in the <em>bs-config.js</em> file, you will need to run this from inside your <code>ft-connect-minimal-site</code> project directory. If you don't use this file, you'll need to either define your own, or add configuration options to the command line.</p>
+<p>You can take advantage of BrowserSync's automatic loading feature even if you choose to use your own webserver, or one of the options listed below by using its "proxy" feature.</p>
+<pre><code>browser-sync start --proxy localhost:8888 --config "bs-config.js" --server --port 3505
+</code></pre>
+<p>where "localhost:8888" is the URL of your webserver</p>
+<h4 id="python-27">Python 2.7+</h4>
+<p>Assuming you already have Python 2.7 installed, run with:</p>
+<pre><code>python -m SimpleHTTPServer 3505
+</code></pre>
+<h4 id="python-3x">Python 3.x</h4>
+<p>Assuming you already have Python 3 installed, run with:</p>
+<pre><code>python -m http.server 3505
+</code></pre>
+<h4 id="ruby-192">Ruby 1.9.2+</h4>
+<p>Assuming you already have Ruby installed, run with:</p>
+<pre><code>ruby -run -ehttpd . -p3505
+</code></pre>
+<h4 id="node-static">node-static</h4>
+<p>Install with:</p>
+<pre><code>npm install -g node-static
+</code></pre>
+<p>and run with:</p>
+<pre><code>ruby -run -ehttpd . -p3505
+</code></pre>
+<h4 id="php-54">PHP 5.4+</h4>
+<p>Assuming you already have PHP installed, run with:</p>
+<pre><code>php -S 127.0.0.1:3505
+</code></pre>
+<h2 id="runtime-environment-setup">Runtime Environment Setup</h2>
+<p>Now you're ready to download the <code>ft-connect-minimal-site</code> code to your development machine and install the libraries that it needs to run.</p>
+<h4 id="get-the-project-source-code">Get the project source code</h4>
+<p>Find a place for the project code to live on your filesystem and clone the remote repository using:</p>
+<pre><code>git clone git@github.com:filethis/ft-connect-minimal-site.git
+</code></pre>
+<p>Then move into the created project directory:</p>
+<pre><code>cd ft-connect-minimal-site
+</code></pre>
+<h4 id="install-the-dependent-libraries">Install the dependent libraries</h4>
+<p>Now we can use Bower to download and install all the other polymer elements that the app uses, as well as the small Polymer runtime support library.</p>
+<p>If you're curious, take a look at the list of dependencies in the <em>bower.json</em> file in the project directory. The <em>bower</em> command will read each of these in turn and pull down not only these dependencies, but any dependencies of the listed packages, recursively.</p>
+<p>While still inside your <code>ft-connect-minimal-site</code> directory, install the dependencies by running:</p>
+<pre><code>bower install
+</code></pre>
+<p>You will see a lot of progress information go by. It should complete without error or interruption.</p>
+<p>When done, take a look in your project directory and observe that there is a new directory called <em>bower_components</em>. This should be full of a number of Polymer components that the project depends on.</p>
+<p>For future reference, you will need to deploy a copy of the <em>bower_components</em> directory to your production server so that your chosen FileThisConnect component can load the elements that it needs.</p>
+<h2 id="runtime-configuration">Runtime configuration</h2>
+<p>As mentioned above, this project does not provide any runtime support for either creating a FileThis user account, or for obtaining a user access token. You will need to paste literal values for both of these into the source code before running it.</p>
+<h4 id="get-an-account-id-and-user-access-token">Get an account ID and user access token</h4>
+<p>Use the <a href="https://filethis.github.io/ft-connect-demo/">FileThisConnect Demo</a> application now and copy a valid FileThis account id and a user access token from it. You may want to create a fresh token so that it does not expire anytime soon.</p>
+<h4 id="configure-the-account-id-and-user-access-token">Configure the account ID and user access token</h4>
+<p>In an editor, open the <em>./src/ft-connect-minimal-site.html</em> file in your project directory. Locate the <em>user-account-id</em> attribute of the element and paste the account id string into its value. Locate the <em>token</em> attribute and paste the token string into its value. Save your changes.</p>
+<h4 id="about-cors">About CORS</h4>
+<p>It may already have occurred to you to there is a potential problem here: Browsers prevent access to data from more than one domain in order to prevent cross-site script exploits. Our component is about to be loaded from your local file system (domain <em>localhost</em>), and it intends to make <em>XMLHttpRequest</em> ("AJAX") calls to the FileThis service, (domain <em>filethis.com</em>). Unless we do something special, your browser will happily load the component, and then simply refuse to make the HTTP requests to FileThis.</p>
+<p>Fortunately, browser manufacturers have provided a way to make specific exceptions to the cross-domain restriction in a safe manner. They call this Cross-Origin Resource Sharing, or CORS, for short. In brief, it works like this:</p>
+<ol>
+<li>When the browser is asked to send an HTTP request to an origin other than the one from which the site was originally loaded, it first builds a "preflight" request that has the same URL and contains all the same headers as the actual request.</li>
+<li>The browser sends its preflight request to the server using the <em>OPTIONS</em> HTTP verb.</li>
+<li>Upon receiving this <em>OPTIONS</em> request, the server reads the domain name and port from the request's <em>ORIGIN</em> header (<em>http://localhost:3505</em>, in our case) and looks this up in an internal whitelist table of some kind. If it finds a match, it responds with success to the <em>OPTIONS</em> request, returning a 200 result code. If it does not find a match, it returns with a non-200 response. We mention in passing that there are other request and response headers which further refine what the requestor is asking to do and, in turn, what server will allow.</li>
+<li>When it receives a 200 response to its <em>OPTIONS</em> preflight request, the browser then sends the original request, and things proceed normally.</li>
+</ol>
+<p>To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for any http or https URL that uses the <em>localhost</em> domain (on any port) so that developers can run our demo and sample applications out of the box.</p>
+<p>You may be wondering how things are handled once you move your code from your development box (<em>localhost</em>) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like <code>https://acme.com</code> and <code>https://staging.acme.com</code>. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until then, please send us a list of your addresses and we will update your whitelist for you.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>You've now brought up the minimal app and have installed a number of development tools. The next section will help guide you through actually embed an instance of the FileThisConnect element into your own website.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ft-into-partner-website/" class="btn btn-neutral float-right" title="Step Three: Into Your Website">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ft-connect-demo/" class="btn btn-neutral" title="Step One: Demo App"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ft-connect-demo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ft-into-partner-website/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
