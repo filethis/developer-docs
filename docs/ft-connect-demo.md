@@ -34,7 +34,7 @@ If an error occurs during the use of the web component instance, an error dialog
 
 Depending on which variant of the web component you selected, you will see one or more of the "panel" sub-components at different points in the user workflows. We describe each of these, next.
 
-## The "Sites" Panel
+## The Sites Panel
 
 The first step in any FileThis user workflow is to allow the user to find and select a company website from which they can fetch their documents. The FileThisConnect web component variants all begin by presenting the user with a list of all companies to which we can connect. We have a sub-component named [ft-source-panel](https://filethis.github.io/ft-source-panel/components/ft-source-panel/) which provides this functionality.
 
@@ -49,7 +49,7 @@ Password: bills
 
 Or, you can cause the site to challenge you with any of several kinds of questions. [This page](https://filethis.github.io/developer-docs/pdf/filethis-test-site-usage.pdf) documents the variety of use cases that the test site can simulate.
 
-## The "Connections" Panel
+## The Connections Panel
 
 Having created a connection, either to our test site, or a real-world company site, you will see a representation of the connection appear in a list in the next panel —an instance of our [ft-connection-panel](https://filethis.github.io/ft-connection-panel/components/ft-connection-panel/) subcomponent.
 
@@ -61,13 +61,13 @@ It's not uncommon for websites to pose challenge questions after users log in su
 
 Our test site provides a convenient and deterministic way to test a variety of workflows that include challenge questions of different types. Again, [this document](https://filethis.github.io/developer-docs/pdf/filethis-test-site-usage.pdf) tells you which fake password string to use to determine the workflow to simulate.
 
-If you're curious about the internal representation of challenge questions used by FileThis, take a look at [this application](https://filethis.github.io/ft-user-interactions-demo/). The left-side column shows the JSON data that represents the question. The center column is a live instance of our [ft-user-interaction-form](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/) sub-component which dynamically renders the question data as a modal dialog. The right-side column displays the JSON data that represents the answer that the user enters into the dialog.
+If you're curious about the data schema used internaly by FileThis to represent challenge questions their and answers, take a look at [this application](https://filethis.github.io/ft-user-interactions-demo/). The left-side column shows the JSON data that represents the question. The center column is a live instance of our [ft-user-interaction-form](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/) sub-component which dynamically renders the question data as a modal dialog. The right-side column displays the JSON data that represents the answer that the user enters into the dialog.
 
-## The "Documents" Panel
+## The Documents Panel
 
-We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-connection-panel/components/ft-document-panel/) sub-component. The display of this panel is optional, but it gives the user a rewarding sense that real work is being done on their behalf.
+We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-document-panel/components/ft-document-panel/) sub-component. The display of this panel is optional, but it gives the user a rewarding sense that real work is being done on their behalf.
 
 
 ## The Next Step
 
-Now that you've been able to play with an instance of the FileThisConnect web component in an application served by our servers, you are ready to take another step on your way to fully embedding the component into your own website. In the next section, you'll go a bit further, instantiating the component in a minimal website that is served from your development box.
+Now that you've been able to play with an instance of the FileThisConnect web component in an application served by our servers, you are ready to take another step on your way to fully embedding the component into your own website. In the next section, you'll instantite the component in a minimal website that is served from your development box.
