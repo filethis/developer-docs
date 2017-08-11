@@ -6,6 +6,7 @@ site_favicon: favicon.ico
 
 pages:
 - 'Home': index.md
-- 'Step One: Demo App': ft-connect-demo.md
-- 'Step Two: Minimal Site App': ft-connect-minimal-site.md
-- 'Step Three: Into Your Website': ft-into-partner-website.md
+- FileThisConnect Web Component:
+    - 'Step One: Demo App': ft-connect-demo.md
+    - 'Step Two: Minimal Site App': ft-connect-minimal-site.md
+    - 'Step Three: Into Your Website': ft-into-partner-website.md

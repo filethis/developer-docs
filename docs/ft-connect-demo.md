@@ -1,5 +1,7 @@
 # FileThisConnect Demo
 
+![Thumbnail](img/ft-connect-demo.png)
+
 The _FileThisConnect Demo_ is a single-page application served from _filethis.com_ that embeds an instance of the FileThisConnect web component element. It is a fixture that wraps a UI around the component, letting you configure, control, and play with the instance. All you need to make it work are your FileThis partner account API key and API secret strings. You can obtain copies of these strings by copying them out of your FileThis partner admin console. If you have not yet gotten set up with your own partner account, please contact us.
 
 The purpose of the demo app is to let you get familiar with how the available variants of the web component appear and behave, and how they guide users through complete document fetching workflows, without yet looking "under the hood" to see how the web component element is wired up.
@@ -36,9 +38,15 @@ Depending on which variant of the web component you selected, you will see one o
 
 ## The Sites Panel
 
+![Thumbnail](img/ft-source-panel.png)
+
 The first step in any FileThis user workflow is to allow the user to find and select a company website from which they can fetch their documents. The FileThisConnect web component variants all begin by presenting the user with a list of all companies to which we can connect. We have a sub-component named [ft-source-panel](https://filethis.github.io/ft-source-panel/components/ft-source-panel/) which provides this functionality.
 
-The web component instance in your demo app begins by displaying this panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account. When they commit the dialog, the component tells the FileThis server to create the connection and kick off the document-fetching operation.
+The web component instance in your demo app begins by displaying this panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account.
+
+![Thumbnail](img/ft-create-connection-dialog.png)
+
+ When the user commits the dialog, the component tells the FileThis server to create the connection and kick off the document-fetching operation.
 
 You're welcome to test fetching documents from any website for which you have valid credentials, but for the sake of convenience you might begin by connecting to our test website. Depending on the fake password string you enter when you connect to the test site, you can explore a variety of different user workflows in a deterministic manner. You can find the test site in the company list by typing "test" into the search field. For example, you can choose a "happy path" that always returns a list of fake billing statements, never interrupting the workflow with a challenge question. The credentials that specify this workflow are:
 
@@ -50,6 +58,8 @@ Password: bills
 Or, you can cause the site to challenge you with any of several kinds of questions. [This page](https://filethis.github.io/developer-docs/pdf/filethis-test-site-usage.pdf) documents the variety of use cases that the test site can simulate.
 
 ## The Connections Panel
+
+![Thumbnail](img/ft-connection-panel.png)
 
 Having created a connection, either to our test site, or a real-world company site, you will see a representation of the connection appear in a list in the next panel —an instance of our [ft-connection-panel](https://filethis.github.io/ft-connection-panel/components/ft-connection-panel/) subcomponent.
 
@@ -64,6 +74,8 @@ Our test site provides a convenient and deterministic way to test a variety of w
 If you're curious about the data schema used internaly by FileThis to represent challenge questions their and answers, take a look at [this application](https://filethis.github.io/ft-user-interactions-demo/). The left-side column shows the JSON data that represents the question. The center column is a live instance of our [ft-user-interaction-form](https://filethis.github.io/ft-user-interaction-form/components/ft-user-interaction-form/) sub-component which dynamically renders the question data as a modal dialog. The right-side column displays the JSON data that represents the answer that the user enters into the dialog.
 
 ## The Documents Panel
+
+![Thumbnail](img/ft-document-panel.png)
 
 We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-document-panel/components/ft-document-panel/) sub-component. The display of this panel is optional, but it gives the user a rewarding sense that real work is being done on their behalf.
 

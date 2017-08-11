@@ -161,6 +161,6 @@ To make things easy, the FileThis server has been preconfigured to include a COR
 
 You may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until then, please send us a list of your addresses and we will update your whitelist for you.
 
-## Next steps
+## The Next Step
 
 You've now brought up the minimal app on your development box and have installed a number of development tools there. The next section will help guide you through actually embedding an instance of the FileThisConnect element into your own website.
