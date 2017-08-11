@@ -69,7 +69,7 @@
         
             <li><a class="toctree-l3" href="#development-environment-setup">Development Environment Setup</a></li>
         
-            <li><a class="toctree-l3" href="#runtime-environment-setup">Runtime Environment Setup</a></li>
+            <li><a class="toctree-l3" href="#project-setup">Project setup</a></li>
         
             <li><a class="toctree-l3" href="#runtime-configuration">Runtime configuration</a></li>
         
@@ -173,18 +173,18 @@
 <p>Assuming you already have Ruby installed, run with:</p>
 <pre><code>ruby -run -ehttpd . -p3505
 </code></pre>
-<h4 id="node-static">node-static</h4>
+<h4 id="nodejs-static-server">NodeJS static-server</h4>
 <p>Install with:</p>
-<pre><code>npm install -g node-static
+<pre><code>npm -g install static-server
 </code></pre>
 <p>and run with:</p>
-<pre><code>ruby -run -ehttpd . -p3505
+<pre><code>static-server --port 3505
 </code></pre>
 <h4 id="php-54">PHP 5.4+</h4>
 <p>Assuming you already have PHP installed, run with:</p>
 <pre><code>php -S 127.0.0.1:3505
 </code></pre>
-<h2 id="runtime-environment-setup">Runtime Environment Setup</h2>
+<h2 id="project-setup">Project setup</h2>
 <p>Now you're ready to download the <code>ft-connect-minimal-site</code> code to your development machine and install the libraries that it needs to run.</p>
 <h4 id="get-the-project-source-code">Get the project source code</h4>
 <p>Find a place for the project code to live on your filesystem and clone the remote repository using:</p>
@@ -193,7 +193,7 @@
 <p>Then move into the created project directory:</p>
 <pre><code>cd ft-connect-minimal-site
 </code></pre>
-<h4 id="install-the-dependent-libraries">Install the dependent libraries</h4>
+<h4 id="install-the-projects-library-dependencies">Install the project's library dependencies</h4>
 <p>Now we can use Bower to download and install all the other polymer elements that the app uses, as well as the small Polymer runtime support library.</p>
 <p>If you're curious, take a look at the list of dependencies in the <em>bower.json</em> file in the project directory. The <em>bower</em> command will read each of these in turn and pull down not only these dependencies, but any dependencies of the listed packages, recursively.</p>
 <p>While still inside your <code>ft-connect-minimal-site</code> directory, install the dependencies by running:</p>
