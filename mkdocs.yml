@@ -1,5 +1,7 @@
 site_name: FileThis Developer Docs
 
+theme: readthedocs
+
 pages:
     - 'Homeeee': 'index.md'
     - 'Step One: Demo App': 'ft-connect-demo.md'
