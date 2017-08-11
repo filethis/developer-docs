@@ -42,11 +42,11 @@ url-repo:  ## Print URL of project GitHub repository page
 
 .PHONY: open-site
 open-site:  ## Open the published documentation in browser
-	@open http://filethis-developer.readthedocs.io/en/latest/
+	@open https://filethis.github.io/developer-docs/
 
 .PHONY: url-site
 url-site:  ## Print URL of the published documentation
-	@echo http://filethis-developer.readthedocs.io/en/latest/;
+	@echo https://filethis.github.io/developer-docs/
 
 
 # Release -----------------------------------------------------------------------------------
@@ -54,19 +54,6 @@ url-site:  ## Print URL of the published documentation
 .PHONY: release
 release: publish-github-pages  ## Publish static files in GitHub Pages for this project
 	@mkdocs gh-deploy
-
-.PHONY: publish-github-pages
-publish-github-pages:
-	@bin_dir="$$(dirname `which gh-pages`)"; \
-	parent_dir="$$(dirname $$bin_dir)"; \
-	lib_dir=$$parent_dir/lib; \
-	rm -rf $$lib_dir/node_modules/gh-pages/.cache; \
-	gh-pages \
-		--repo https://github.com/filethis/${NAME}.git \
-		--branch gh-pages \
-		--silent \
-		--dist ./docs; \
-	echo Published version ${VERSION} of application \"${NAME}\" to GitHub Pages at https://filethis.github.io/${NAME};
 
 
 # Help -----------------------------------------------------------------------------------
