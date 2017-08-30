@@ -14,7 +14,7 @@ The following instructions assume you have a Unix-like shell environment, but sh
 
 ### Install the Node Package Manager
 
-The Node Package Manager (NPM) makes it easy to download and install Javascript tools and libraries from the command line. We need it for just one reason: to install a tool called Bower, which is yet another package manager. Bower is used by Polymer (though there is talk about moving to NPM, instead).
+The [Node Package Manager](https://www.npmjs.com/) (NPM) makes it easy to download and install Javascript tools and libraries from the command line. We need it for just one reason: to install a tool called [Bower](https://bower.io/), which is yet another package manager.
 
 The easiest way to install the _npm_ command line tool is to install the whole NodeJS package. You can get the installer from [here](https://nodejs.org/en/).
 
@@ -26,7 +26,7 @@ and observing that you are given a version number.
 
 ### Install Git
 
-Bower uses Git to store the code and version tags associated with the packages that it manages. The _git_ command line tool must be installed on your machine in order for it to work.
+Bower uses [Git](https://git-scm.com/) to store the code and version tags associated with the packages that it manages. The _git_ command line tool must be installed on your machine in order for it to work.
 
 There are many ways to install Git on each platform. Follow [this guide](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git) to decide the best way for you. 
 
@@ -36,7 +36,7 @@ When you're done, verify that the _git_ command is available in your terminal by
 
 ### Install Bower
 
-Next, we use NPM to install Bower. Run this command:
+Next, we use NPM to install [Bower](https://bower.io/). Run this command:
 
     npm install -g bower
 
@@ -107,7 +107,7 @@ Assuming you already have PHP installed, run with:
      
 ## Project setup
 
-Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that it needs to run.
+Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that it depends on.
 
 #### Get the project source code
 
@@ -121,7 +121,7 @@ Then move into the created project directory:
 
 #### Install the project's library dependencies
 
-Now we can use Bower to download and install all the other polymer elements that the app uses, as well as the small Polymer runtime support library.
+Now we can use Bower to download and install all the other web component elements that the app uses, as well as the small runtime support library.
 
 If you're curious, take a look at the list of dependencies in the _bower.json_ file in the project directory. The _bower_ command will read each of these in turn and pull down not only these dependencies, but any dependencies of the listed packages, recursively.
 
@@ -131,7 +131,7 @@ While still inside your `ft-connect-minimal-site` directory, install the depende
 
 You will see a lot of progress information go by. It should complete without error or interruption.
 
-When done, take a look in your project directory and observe that there is a new directory called _bower_components_. This should be full of a number of Polymer components that the project depends on.
+When done, take a look in your project directory and observe that it contains a new directory called _bower_components_. This new directory all the libraries that the project depends on.
 
 ## Runtime configuration
 
@@ -157,7 +157,7 @@ Fortunately, browser manufacturers have provided a way to make specific exceptio
  3. Upon receiving this _OPTIONS_ request, the server reads the domain name and port from the request's _ORIGIN_ header (_http://localhost:3505_, in our case) and looks this up in an internal whitelist table of some kind. If it finds a match, it responds with success to the _OPTIONS_ request, returning a 200 result code. If it does not find a match, it returns with a non-200 response. We mention in passing that there are other request and response headers which further refine what the requestor is asking to do and, in turn, what server will allow.
  4. When it receives a 200 response to its _OPTIONS_ preflight request, the browser then sends the original request, and things proceed normally.
  
-To make things easy, the FileThis server has been preconfigured to include a CORS whitelist entry for any _http_ or _https_ URL that uses the _localhost_ domain (on any port) so that developers can run our demo and sample applications out of the box.
+To make things easier, the FileThis server has been preconfigured to include a CORS whitelist entry for any _http_ or _https_ URL that uses the _localhost_ domain (on any port) so that developers can run our demo and sample applications out of the box.
 
 You may be wondering how things are handled once you move your code from your development box (_localhost_) to your testing, staging, and production systems. The FileThisConnect component that you embed into your website will be served, along with all your other files, from your own domains. The FileThis server will need to have a CORS whitelist entry for your address —something like `https://acme.com` and `https://staging.acme.com`. We are working on an enhanced version of our partner console that will allow you to edit your own whitelist. Until then, please send us a list of your addresses and we will update your whitelist for you.
 

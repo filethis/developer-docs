@@ -8,4 +8,4 @@ This section is under construction. What it will do, in short, is guide you thro
 4. Show you how to customize and style the FileThis web component using element attributes, CSS, and JavaScript calls.
 5. Exposing a webhook endpoint in your system to which the FileThis server will deliver documents fetched on behalf of your users.
 
-Until this section has been released, please engage with us on our shared Slack channel for realtime guidance.
+Until this section has been released, please engage with us on our shared FileThis Slack channel for realtime guidance. If you do not have a shared FileThis Slack channel, please contact <oem@filethis.com>.
