@@ -42,7 +42,7 @@ Depending on which variant of the web component you selected, you will see one o
 
 The first step in any FileThis user workflow is to allow the user to find and select a company website from which they can fetch their documents. The FileThisConnect web component variants all begin by presenting the user with a list of all companies to which we can connect. We have a sub-component named [ft-source-panel](https://filethis.github.io/ft-source-panel/components/ft-source-panel/) which provides this functionality.
 
-The web component instance in your demo app begins by displaying a list of companies in the ft-source-panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account.
+The web component instance in your demo app begins by displaying a list of companies in the ft-source-panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account:
 
 ![Thumbnail](img/ft-create-connection-dialog.png)
 
@@ -84,4 +84,4 @@ We mentioned above that as documents start to be fetched from a company website 
 
 ## The Next Step
 
-Now that you've been able to play with an instance of the FileThisConnect web component in an application served by our servers, you are ready to take another step on your way to fully embedding the component into your own website. In the next section, you'll instantiate the component in a minimal website that is served from your development box.
+Now that you've been able to play with an instance of the FileThisConnect web component in an application served by our servers, you're ready for the next section in which you'll instantiate the component in a minimal website that is served from your development box.

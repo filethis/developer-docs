@@ -107,7 +107,7 @@ Assuming you already have PHP installed, run with:
      
 ## Project setup
 
-Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that it depends on.
+Now you're ready to download the `ft-connect-minimal-site` code to your development machine and install the libraries that the code depends on.
 
 #### Get the project source code
 
@@ -131,7 +131,7 @@ While still inside your `ft-connect-minimal-site` directory, install the depende
 
 You will see a lot of progress information go by. It should complete without error or interruption.
 
-When done, take a look in your project directory and observe that it contains a new directory called _bower_components_. This new directory all the libraries that the project depends on.
+When done, take a look in your project directory and observe that it contains a new directory called _bower_components_. This new directory contains all the libraries that the project depends on.
 
 ## Runtime configuration
 
