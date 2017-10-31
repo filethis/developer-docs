@@ -7,9 +7,9 @@ site_favicon: favicon.ico
 pages:
 - Home: index.md
 - Front End SDK:
-    - The Development Tool: front-end/ft-connect-demo.md
-    - Exploring a Rendered Component: front-end/ft-rendered-component.md
-    - Code Generation: front-end/ft-code-generation.md
+    - The Development Tool: front-end/ft-development-tool.md
+    - A Live Component: front-end/ft-rendered-component.md
+    - Generated Code: front-end/ft-code-generation.md
     - Embedding into a Minimal Site: front-end/ft-connect-minimal-site.md
 #- Back End SDK:
 #    - Overview: back-end/placeholder.md

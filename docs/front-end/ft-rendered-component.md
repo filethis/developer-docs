@@ -1,9 +1,8 @@
+# Overview
 
-## Bringing the Web Component to Life
+Having created a FileThis user account and user access token, you can now inject these into the instance of the FileThisConnect web component that is embedded in the development tool's main panel. To turn it on, click the "power" button at the top right of the window. You should see the component render, showing a list of company logos for websites from which we can fetch documents. The component is now "alive" and communicating with the FileThis production server.
 
-Having created a FileThis user account and user token, these will be injected into the instance of the FileThisConnect web component element for you. The main panel of the demo app is where the component is embedded. To turn it on, click the "power" button at the top right of the window. You should see the component appear, showing a list of company logos for websites from which we can fetch documents. The component is now "alive" and communicating with the FileThis production server.
-
-If an error occurs during the use of the web component instance, an error dialog will be displayed by the demo app, and the component will be turned off, as indicated by the power button at the top right. The expiration of the user token is one such error case. When you embed the component into your product's website, you will likely wire up your own handler for error events to deal with things in your own way.
+If an error occurs during the use of the web component instance, an error dialog will be displayed by the demo app, and the component will be turned off, as indicated by the power button at the top right. The expiration of the user access token is one such error case. When you embed the component into your product's website, you will likely wire up your own handler for error events to deal with things in your own way.
 
 Depending on which variant of the web component you selected, you will see one or more of the "panel" sub-components at different points in the user workflows. We describe each of these, next.
 
@@ -13,7 +12,7 @@ Depending on which variant of the web component you selected, you will see one o
 
 The first step in any FileThis user workflow is to allow the user to find and select a company website from which they can fetch their documents. The FileThisConnect web component variants all begin by presenting the user with a list of all companies to which we can connect. We have a sub-component named [ft-source-panel](https://filethis.github.io/ft-source-panel/components/ft-source-panel/) which provides this functionality.
 
-The web component instance in your demo app begins by displaying a list of companies in the ft-source-panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account:
+The web component instance in your development tool app begins by displaying a list of companies in the ft-source-panel. Note that users can narrow down which companies are displayed by selecting a filter preset from a popup menu, and/or by entering a search string which matches company names. When the user recognizes a company to which they want to connect, they click its logo. When they do so, the component poses a modal dialog that prompts them to enter their username and password for the site's account:
 
 ![Thumbnail](assets/ft-create-connection-dialog.png)
 
@@ -50,4 +49,9 @@ If you're curious about the data schema used internally by FileThis to represent
 
 ![Thumbnail](assets/ft-document-panel.png)
 
-We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-document-panel/components/ft-document-panel/) sub-component. The display of this panel is optional, but it gives the user a rewarding sense that real work is being done on their behalf.
+We mentioned above that as documents start to be fetched from a company website for the connections created by a user, we display thumbnails of their first page in our web component. This uses an instance of our [ft-document-panel](https://filethis.github.io/ft-document-panel/components/ft-document-panel/) sub-component.
+
+
+## The Next Step
+
+In the next section you'll look behind the live web component to see the code that is used to embed it into an HTML page.
