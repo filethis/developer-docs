@@ -26,7 +26,7 @@ In the _Instance_ panel of the development tool, observe that there is a popup m
 
 If you toggle this choice, you'll see that the URL's change in the links in the code subpanels below.
 
-The "Drop-in" option make it very easy to test the FileThis web component because you don't need to provision your site to include the libraries that the component depends upon to run (including the code for the component's own implementation). Note that the URL's for this option are all external and are served from a CDN. Of course, you would not want to use this deployment option in your production system for several reasons. For one, you will want to run all client code through your build pipeline to vulcanize, minify, etc.
+The "Drop-in" option makes it very easy to test the FileThis web component because you don't need to provision your site to include the libraries that the component depends upon to run (including the code for the component's own implementation). Note that the URL's for this option are all external and are served from a CDN. Of course, you would not want to use this deployment option in your production system for several reasons. For one, you will want to run all client code through your build pipeline to vulcanize, minify, etc.
 
 The "Production" option is what you'll want to use once you're done testing and prototyping. Note that the URL's in the production links refer to a "bower_components" directory that is relative to the page. You'll learn more in the next section about how to populate this directory.
 

@@ -163,4 +163,4 @@ You may be wondering how things are handled once you move your code from your de
 
 ## The Next Step
 
-You've now brought up the minimal app on your development box and have installed a number of development tools there, you're ready to move on to embedded the component and starting to work on your back-end integration with FileThis. Please contact us on our Slack channel for further guidance.
+Now that you've brought up the minimal app on your development box, and have installed a number of development tools there, you're ready to move on to embedding the component into your website and starting to work on your back-end integration with FileThis. Please contact us on our Slack channel for further guidance.
