@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-08-31</lastmod>
+     <lastmod>2017-10-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,20 +12,26 @@
     
         
     <url>
-     <loc>/ft-connect-demo/</loc>
-     <lastmod>2017-08-31</lastmod>
+     <loc>/front-end/ft-development-tool/</loc>
+     <lastmod>2017-10-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/ft-connect-minimal-site/</loc>
-     <lastmod>2017-08-31</lastmod>
+     <loc>/front-end/ft-rendered-component/</loc>
+     <lastmod>2017-10-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/ft-into-partner-website/</loc>
-     <lastmod>2017-08-31</lastmod>
+     <loc>/front-end/ft-code-generation/</loc>
+     <lastmod>2017-10-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/front-end/ft-connect-minimal-site/</loc>
+     <lastmod>2017-10-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../favicon.ico">
+  
+  <title>The Development Tool - FileThis Developer Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "The Development Tool";
+    var mkdocs_page_input_path = "front-end/ft-development-tool.md";
+    var mkdocs_page_url = "/front-end/ft-development-tool/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> FileThis Developer Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Front End SDK</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">The Development Tool</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#overview">Overview</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#loading-the-app">Loading the App</a></li>
+        
+            <li><a class="toctree-l4" href="#fixture-configuration">Fixture Configuration</a></li>
+        
+            <li><a class="toctree-l4" href="#the-next-step">The Next Step</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ft-rendered-component/">A Live Component</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ft-code-generation/">Generated Code</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ft-connect-minimal-site/">Embedding into a Minimal Site</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">FileThis Developer Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Front End SDK &raquo;</li>
+        
+      
+    
+    <li>The Development Tool</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="overview">Overview</h1>
+<p><img alt="Thumbnail" src="../assets/ft-development-tool.png" /></p>
+<p>The <em>FileThisConnect Front End Development Tool</em> is a single-page application that embeds an instance of the FileThisConnect web component element. It's a fixture that wraps a UI around the component, letting you configure, control, and play with the instance. All you need to make it work are your FileThis partner account API key and API secret strings. If you do not have a FileThis partner account yet, please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#101;&#109;&#64;&#102;&#105;&#108;&#101;&#116;&#104;&#105;&#115;&#46;&#99;&#111;&#109;">&#111;&#101;&#109;&#64;&#102;&#105;&#108;&#101;&#116;&#104;&#105;&#115;&#46;&#99;&#111;&#109;</a>.</p>
+<p>In this section, you'll get familiar with how the available variants of the web component appear and behave, and how they guide users through complete document fetching workflows, without yet looking "under the hood" to see how the web component is wired up.</p>
+<h2 id="loading-the-app">Loading the App</h2>
+<p>Start by loading the demo app into your browser from <a href="https://filethis.github.io/ft-connect-demo/">here</a>.</p>
+<p>Note that the values you enter into most of the fields in this app will be stored in the browser's local storage for your convenience. When you visit the page again, or refresh it, the fields will retain the values you entered previously. Fields which contain secrets are not stored with encryption. If you're not comfortable with leaving them there between sessions, you can click the "Clear" button in the "Secrets" item in the fixture panel when you're done working:</p>
+<p><img alt="Thumbnail" src="../assets/ft-clear-secrets-button.png" /></p>
+<h2 id="fixture-configuration">Fixture Configuration</h2>
+<ol>
+<li>If the <em>Fixture</em> side-panel on the left of the window is hidden, click the right-pointing arrow button at the upper left of the window to show it.</li>
+<li>Copy and paste both your API key and API secret strings into the labeled fields.</li>
+<li>Verify that they are valid by clicking the "Test" button to the right of the fields.</li>
+<li>Create a FileThis user account for testing by clicking the "New" button to the right of the account ID field.</li>
+<li>Observe that an account ID number appears in the field.</li>
+<li>Test the validity of the account ID by clicking the "Test" button to the right of the field. You can do this at any point in the future as a sanity check.</li>
+<li>Create a user access token for the account by clicking the "New" button to the right of the "Token" field.</li>
+<li>Observe that a token string appears in the field.</li>
+<li>Test the validity of the token by clicking the "Test" button to the right of the field. This is useful for testing whether your token has expired, or not before using it for additional testing.</li>
+<li>Observe that there are three "variants" of the FileThisConnect web component available under the popup menu in the middle of the header bar of the main panel: <em>ft-connect-wizard</em>, <em>ft-connect-tabbed</em>, and <em>ft-connect-expand-out</em>. The last one lets the user see a number of panels on the screen at the same time, expanding out to the right side of the web component element for each panel. The second one makes better use of screen real estate, placing each panel into a tab bar. The first one embodies a complete, self-contained user workflow and is recommended as a starting point. Make sure that the <em>ft-connect-wizard</em> is selected before proceeding.</li>
+</ol>
+<h2 id="the-next-step">The Next Step</h2>
+<p>Having set up the fixture in the front end development tool, you're ready explore the behavior of a live instance of an embedded FileThis web component in the next section.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ft-rendered-component/" class="btn btn-neutral float-right" title="A Live Component">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ft-rendered-component/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
