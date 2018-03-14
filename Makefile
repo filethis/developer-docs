@@ -26,6 +26,10 @@ build-site:  ## Build site
 clean-site:  ## Clean site
 	@mkdocs build  --clean
 
+.PHONY: zip-site
+zip-site:  ## Zip the site up
+	@zip -r -X site.zip ./site
+
 
 # GitHub Repository -----------------------------------------------------------------------------------
 

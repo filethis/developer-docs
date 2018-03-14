@@ -2,7 +2,7 @@
 
 ![Thumbnail](assets/ft-development-tool.png)
 
-The _FileThisConnect Front End Development Tool_ is a single-page application that embeds an instance of the FileThisConnect web component element. It's a fixture that wraps a UI around the component, letting you configure, control, and play with the instance. All you need to make it work are your FileThis partner account API key and API secret strings. If you do not have a FileThis partner account yet, please contact <oem@filethis.com>.
+The _FileThisConnect Front-End Development Tool_ is a single-page application that embeds an instance of the FileThisConnect web component element. It's a fixture that wraps a UI around the component, letting you configure, control, and play with the instance. All you need to make it work are your FileThis partner account API key and API secret strings. If you do not have a FileThis partner account yet, please contact <oem@filethis.com>.
 
 In this section, you'll get familiar with how the available variants of the web component appear and behave, and how they guide users through complete document fetching workflows, without yet looking "under the hood" to see how the web component is wired up.
 
