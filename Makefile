@@ -1,6 +1,6 @@
 # Project configuration
 
-NAME=developer-docs
+NAME=website-developer
 VERSION=0.0.1
 LOCAL_PORT=1025
 
@@ -11,23 +11,23 @@ LOCAL_PORT=1025
 serve:  ## Serve the documentation locally using mkdocs command
 	@mkdocs serve --dev-addr=0.0.0.0:${LOCAL_PORT}
 
-.PHONY: open
-open:  ## Open locally-served documentation in browser
+.PHONY: browse
+browse:  ## Open locally-served documentation in browser
 	@open http://127.0.0.1:${LOCAL_PORT}
 
 
 # Building -----------------------------------------------------------------------------------
 
-.PHONY: build-site
-build-site:  ## Build site
+.PHONY: build
+build:  ## Build site
 	@mkdocs build
 
-.PHONY: clean-site
-clean-site:  ## Clean site
+.PHONY: clean
+clean:  ## Clean site
 	@mkdocs build  --clean
 
-.PHONY: zip-site
-zip-site:  ## Zip the site up
+.PHONY: zip
+zip:  ## Zip the site up
 	@zip -r -X site.zip ./site
 
 
